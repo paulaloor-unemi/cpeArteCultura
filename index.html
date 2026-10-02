@@ -1,57 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>
-      Manabí, cultura viva | Patrimonio Cultural Digital del Ecuador
-    </title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <nav id="menu" aria-label="Secciones"></nav>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manabí, cultura viva | Patrimonio Cultural Digital del Ecuador</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <header class="hero" id="inicio">
-      <h1>Manabí</h1>
-      <p>
-        Cultura viva: arte, sabores, música y tradiciones de una provincia del
-        Ecuador.
-      </p>
-      <a class="btn" href="#provincia">Explorar el portal</a>
-      <svg viewBox="0 0 1200 100" preserveAspectRatio="none" aria-hidden="true">
-        <path
-          d="M0 50 C150 90 300 10 450 50 S750 90 900 50 S1100 20 1200 50 V100 H0Z"
-          fill="#f6f9f8"
-        />
-      </svg>
-    </header>
+<nav id="menu" aria-label="Secciones"></nav>
 
-    <main id="contenido"></main>
+<header class="hero" id="inicio">
+  <h1>Manabí</h1>
+  <p>Cultura viva: arte, sabores, música y tradiciones de una provincia del Ecuador.</p>
+  <a class="btn" href="#provincia">Explorar el portal</a>
+  <svg viewBox="0 0 1200 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50 C150 90 300 10 450 50 S750 90 900 50 S1100 20 1200 50 V100 H0Z" fill="#f6f9f8"/></svg>
+</header>
 
-    <footer>
-      <div class="in">
-        <div>
-          <h3 id="pie-titulo"></h3>
-          <p id="pie-texto"></p>
-        </div>
-        <div class="qr">
-          <span>Coloca img/qr.png</span
-          ><img
-            src="img/qr.png"
-            alt="Código QR de acceso al portal"
-            onerror="this.remove()"
-          />
-        </div>
-      </div>
-    </footer>
+<main id="contenido"></main>
 
-    <script>
-      /* =====================================================================
+<footer>
+  <div class="in">
+    <div>
+      <h3 id="pie-titulo"></h3>
+      <p id="pie-texto"></p>
+    </div>
+    <div class="qr"><span>Coloca img/qr.png</span><img src="img/qr.png" alt="Código QR de acceso al portal" onerror="this.remove()"></div>
+  </div>
+</footer>
+
+<script>
+/* =====================================================================
    PLANTILLA: TODO EL CONTENIDO SE EDITA AQUÍ (no hace falta tocar el HTML)
    - Cambia textos entre comillas.
    - Imágenes: guarda el archivo en la carpeta "img/" y escribe su nombre.
@@ -60,264 +41,167 @@
    - Las citas van dentro del texto como (Autor, año) y las fuentes abajo.
    ===================================================================== */
 
-      const SITIO = {
-        piTitulo: "Patrimonio Cultural Digital del Ecuador: Manabí",
-        piTexto:
-          "Proyecto Integrador de Apreciación del Arte y Cultura, UNEMI. Grupo: [NÚMERO DE GRUPO]. Enlace: [PEGAR URL DE GITHUB PAGES].",
-        video: "", // Pega aquí la URL de incrustación de YouTube, ej: "https://www.youtube.com/embed/XXXXXXXXXXX". Vacío = recuadro de relleno.
-        videoArchivo: "", // Alternativa: archivo de video en la carpeta, ej: "video/manabi.mp4"
-      };
+const SITIO = {
+  piTitulo: "Patrimonio Cultural Digital del Ecuador: Manabí",
+  piTexto: "Proyecto Integrador de Apreciación del Arte y Cultura (C5), UNEMI. Grupo 6. Periodo agosto–diciembre 2026. Enlace: [PEGAR URL DE GITHUB PAGES].",
+  video: "",   // URL de incrustación de YouTube, ej: "https://www.youtube.com/embed/XXXXXXXXXXX". Vacío = recuadro de relleno.
+  videoArchivo: "" // Alternativa: archivo de video, ej: "video/manabi.mp4"
+};
 
-      const SECCIONES = [
-        {
-          id: "provincia",
-          nav: "Provincia",
-          titulo: "Presentación de la provincia",
-          autor: "Valeska Arguello",
-          texto: [
-            "[Párrafo sobre la ubicación de Manabí.]",
-            "[Párrafo sobre su historia y datos generales.]",
-          ],
-          items: [
-            { t: "Ubicación", d: "[Dato]" },
-            { t: "Capital", d: "[Dato]" },
-            { t: "Cantones", d: "[Dato]" },
-            { t: "Población", d: "[Dato]" },
-          ],
-          img: "mapa-manabi.jpg",
-          pie: "Mapa de la provincia de Manabí. Fuente: [fuente].",
-          fuentes: "(Autor, año)",
-        },
+const SECCIONES = [
+ { id:"provincia", nav:"Provincia", titulo:"Presentación de la provincia", autor:"Valeska Arguello",
+   texto:[
+    "<strong>Ubicación.</strong> Manabí está localizada en el centro-noroeste del Ecuador continental y pertenece a la región geográfica del Litoral (Gobernación de Manabí, s. f.-a). Su capital es Portoviejo, y la provincia se divide en 22 cantones (Consorcio de Gobiernos Autónomos Provinciales del Ecuador [CONGOPE], s. f.).",
+    "<strong>Historia.</strong> La parte sur de Manabí fue sede del señorío de Cancebí, mientras que la parte central y norte fue primero un reino indígena compuesto por confederaciones de tribus (Gobernación de Manabí, s. f.-a). El 2 de agosto de 1822 se creó la “Provincia de Portoviejo”, pero sin personería jurídica. La creación político-administrativa llegó el 25 de junio de 1824, con la Primera Ley de División Territorial, que le otorgó personería jurídica y la denominó Manabí (Gobernación de Manabí, s. f.-a).",
+    "<strong>Datos generales.</strong> Según el CONGOPE (s. f.), Manabí tiene una extensión de 19 427,64 km² y una población de 1 592 840 habitantes. Sus actividades principales son el comercio, la ganadería, la industria y la pesca, además del turismo en sus extensas playas (Gobernación de Manabí, s. f.-a)."],
+   items:[{t:"Capital",d:"Portoviejo"},{t:"Cantones",d:"22"},{t:"Extensión",d:"19 427,64 km²"},{t:"Población",d:"1 592 840 habitantes"}],
+   img:"mapa-manabi.jpg", pie:"Figura 1. Mapa de la provincia de Manabí. Fuente: paintmaps.com.",
+   fuentes:"Gobernación de Manabí (s. f.-a); CONGOPE (s. f.)." },
 
-        {
-          id: "arte",
-          nav: "Arte y patrimonio",
-          titulo: "Arte y patrimonio",
-          autor: "Valeska Arguello",
-          texto: [
-            "[Párrafo sobre arte, arquitectura, literatura y patrimonio cultural de Manabí.]",
-          ],
-          items: [
-            { t: "Arte", d: "[Descripción]" },
-            { t: "Arquitectura", d: "[Descripción]" },
-            { t: "Literatura", d: "[Descripción]" },
-            { t: "Patrimonio cultural", d: "[Descripción]" },
-          ],
-          img: "arte.jpg",
-          pie: "[Descripción de la imagen]. Fuente: [fuente].",
-          fuentes: "(Autor, año)",
-        },
+ { id:"arte", nav:"Arte y patrimonio", titulo:"Arte y patrimonio", autor:"Valeska Arguello",
+   texto:[
+    "<strong>Arte.</strong> Manabí conserva un legado artístico ancestral. El Museo y Centro Cultural Manta muestra elementos de las culturas Valdivia, Machalilla, Chorrera, Jama Coaque, Bahía, Guangala y Manteño, entre ellos las sillas en forma de “U” (Ministerio de Cultura y Patrimonio, 2022). La cultura Jama Coaque destacó por su cerámica hecha por artesanos especializados, con figurillas de músicos, danzantes y agricultores (Ministerio de Cultura y Patrimonio, s. f.).",
+    "<strong>Arquitectura.</strong> Bahía de Caráquez recibió la denominación de “ciudad patrimonial” en 1955 por sus bienes históricos, arquitectónicos y culturales (Instituto Nacional de Patrimonio Cultural [INPC], s. f.). En Portoviejo, la casa Sara Cedeño de Vélez, construida hacia 1925 tras el incendio de la ciudad, fue rehabilitada por el INPC conservando su arquitectura original (Gobernación de Manabí, s. f.-b).",
+    "<strong>Literatura.</strong> Horacio Hidrovo Velásquez publicó en 1957 “Un hombre y un río”, considerado el libro más leído en Manabí (Alcívar Intriago, 2019). Su hijo, Horacio Hidrovo Peñaherrera, continuó la tradición de la literatura manabita.",
+    "<strong>Patrimonio cultural.</strong> El origen del tejido del sombrero de paja toquilla se localiza en Manabí (INPC, 2012). La UNESCO lo declaró Patrimonio Inmaterial de la Humanidad en 2012 (Ministerio de Turismo, 2017)."],
+   items:[],
+   img:"arte.jpg", pie:"[Descripción de la imagen]. Fuente: [fuente].",
+   fuentes:"Ministerio de Cultura y Patrimonio (2022, s. f.); INPC (s. f., 2012); Gobernación de Manabí (s. f.-b); Alcívar Intriago (2019); Ministerio de Turismo (2017)." },
 
-        {
-          id: "cultura",
-          nav: "Cultura",
-          titulo: "Cultura",
-          autor: "Gabriela Chuchuca",
-          texto: [
-            "[Párrafo sobre pueblos, nacionalidades, lenguas y tradiciones.]",
-          ],
-          items: [
-            { t: "Pueblos y nacionalidades", d: "[Dato]" },
-            { t: "Lenguas", d: "[Dato]" },
-            { t: "Tradiciones", d: "[Dato]" },
-          ],
-          img: "cultura.jpg",
-          pie: "[Descripción]. Fuente: [fuente].",
-          fuentes: "(Autor, año)",
-        },
+ { id:"cultura", nav:"Cultura", titulo:"Cultura", autor:"Gabriela Chuchuca",
+   texto:[
+    "Manabí posee una identidad cultural construida a partir de la relación entre sus comunidades, el territorio costero y las actividades agrícolas, pesqueras y artesanales. Entre sus principales expresiones culturales está el pueblo montubio, cuya presencia es especialmente importante en Manabí y otras provincias de la Costa ecuatoriana. La identidad montubia se relaciona con la vida rural, el trabajo agrícola y ganadero, el uso tradicional del sombrero y el machete, además de expresiones orales como los amorfinos (INPC, 2015).",
+    "<strong>Pueblos y nacionalidades.</strong> En la provincia también existen comunidades vinculadas con la cultura cholo pescadora, específicamente en zonas costeras. Su identidad se relaciona con la pesca artesanal, la navegación y el aprovechamiento de los recursos del mar. Estas prácticas se han transmitido entre generaciones y forman parte de la memoria cultural de las comunidades costeras (Gobierno Provincial de Manabí, 2023).",
+    "<strong>Lenguas.</strong> En la actualidad el castellano es la lengua de uso predominante en las comunidades manabitas. Por ejemplo, el registro de patrimonio cultural inmaterial de la provincia identifica al grupo montubio y al castellano como elementos relacionados con determinadas manifestaciones de tradición oral (Torres Pihuave, 2024).",
+    "<strong>Tradiciones.</strong> Entre las más representativas están los amorfinos, las fiestas comunitarias, las prácticas agrícolas y pesqueras, la elaboración artesanal y diferentes costumbres gastronómicas. En las comunidades de Jipijapa, por ejemplo, se han registrado fiestas patronales, juegos tradicionales, medicina tradicional mediante plantas y el uso del horno de leña como parte de las prácticas culturales locales (Suárez Baque, 2023)."],
+   items:[],
+   img:"cultura.jpg", pie:"[Descripción]. Fuente: [fuente].",
+   fuentes:"INPC (2015); Gobierno Provincial de Manabí (2023); Torres Pihuave (2024); Suárez Baque (2023)." },
 
-        {
-          id: "gastronomia",
-          nav: "Gastronomía",
-          titulo: "Gastronomía",
-          autor: "Gabriela Chuchuca",
-          texto: ["[Introducción a la gastronomía de Manabí.]"],
-          items: [
-            { t: "Plato típico 1", d: "Ingredientes: [..]. Historia: [..]." },
-            { t: "Plato típico 2", d: "Ingredientes: [..]. Historia: [..]." },
-            { t: "Plato típico 3", d: "Ingredientes: [..]. Historia: [..]." },
-            { t: "Plato típico 4", d: "Ingredientes: [..]. Historia: [..]." },
-            { t: "Plato típico 5", d: "Ingredientes: [..]. Historia: [..]." },
-          ],
-          img: "gastronomia.jpg",
-          pie: "[Descripción]. Fuente: [fuente].",
-          fuentes: "(Autor, año)",
-        },
+ { id:"gastronomia", nav:"Gastronomía", titulo:"Gastronomía", autor:"Gabriela Chuchuca",
+   texto:["La gastronomía es una de las principales expresiones de la identidad manabita porque combina productos del mar y del campo. Entre los ingredientes más representativos se encuentran el plátano, el maní, el pescado, los mariscos, el queso y la gallina criolla (Duarte-Casar y Parreño-García, 2025)."],
+   items:[
+    {t:"Viche",d:"<em>Ingredientes:</em> pescado o mariscos, maní, choclo, maduro, verduras y otros productos locales. <em>Historia:</em> es la sopa más representativa de la provincia. En 2024 Portoviejo preparó el más grande del mundo, de más de 1 900 kg (Mes del Manabitismo, 2025)."},
+    {t:"Tonga",d:"<em>Ingredientes:</em> arroz, gallina criolla o pollo, salsa de maní, maduro y hoja de plátano. <em>Historia:</em> se remonta a la época colonial. Antes llevaba camote, zapallo y habichuela, y cambió con la llegada del arroz y los españoles (Manabí, gastronomía milenaria, 2025)."},
+    {t:"Corviche",d:"<em>Ingredientes:</em> plátano verde, maní y pescado o mariscos. <em>Historia:</em> forma parte de los platos con sufijo “iche” de raíz aborigen (Mes del Manabitismo, 2025)."},
+    {t:"Ceviche de Jipijapa",d:"<em>Ingredientes:</em> marisco o pescado con salsa de maní. <em>Historia:</em> es uno de los platos emblemáticos de la provincia y se prepara con un toque propio de Jipijapa (Manabí es designada, 2024)."},
+    {t:"Caldo de gallina criolla",d:"<em>Ingredientes:</em> gallina criolla, verduras, yuca, plátano y condimentos. <em>Historia:</em> preparación tradicional de las zonas rurales y parte de la cocina familiar manabita. La gallina criolla se incorporó a la alimentación de la región y hoy se usa en caldos y otros platos (Alvarado et al., 2021)."}],
+   img:"gastronomia.jpg", pie:"[Descripción]. Fuente: [fuente].",
+   fuentes:"Duarte-Casar y Parreño-García (2025); Mes del Manabitismo (2025); Alvarado et al. (2021)." },
 
-        {
-          id: "musica",
-          nav: "Música",
-          titulo: "Música",
-          autor: "Rosa Núñez",
-          texto: ["[Párrafo sobre ritmos, instrumentos y artistas.]"],
-          items: [
-            { t: "Ritmos", d: "[Dato]" },
-            { t: "Instrumentos", d: "[Dato]" },
-            { t: "Artistas", d: "[Dato]" },
-          ],
-          img: "musica.jpg",
-          pie: "[Descripción]. Fuente: [fuente].",
-          fuentes: "(Autor, año)",
-        },
+ { id:"musica", nav:"Música", titulo:"Música", autor:"Rosa Núñez",
+   texto:[
+    "<strong>Ritmos.</strong> La música de Manabí está ligada a la cultura montubia y a su tradición oral. Su género más representativo es el amorfino, cuya composición se basa en versos de ocho sílabas. Junto a él se mencionan otros ritmos montubios, como el galope, la guaracha montubia y el caminante (Macías Ferrin, 2020).",
+    "<strong>Instrumentos.</strong> Uno de los más característicos es la caja tambora, un instrumento de percusión elaborado con maderas del campo manabita e incrustaciones de bambú. Tiene forma octagonal, porque este diseño favorece la riqueza del sonido, y un orificio en la parte superior por donde sale el aire. Produce sonidos agudos en su lado izquierdo y graves-medios en el derecho. Su función es llevar la célula rítmica que los montubios usan para el amorfino (Macías Ferrin, 2020).",
+    "<strong>Artistas.</strong> Entre quienes han aportado a esta música está Luis Andrés Macías Ferrin, de la Universidad Laica Eloy Alfaro de Manabí, quien estudia la caja tambora y su papel en la música montubia. También se reconoce el trabajo del folclorólogo Manuel de Jesús Álvarez, uno de los pocos autores que investigó la historia del amorfino. La caja tambora surgió de la necesidad de crear nuevas memorias culturales a partir de la música de tradición oral montubia, lo que muestra que esta herencia sigue viva y se renueva (Macías Ferrin, 2020)."],
+   items:[{t:"Ritmo principal",d:"Amorfino"},{t:"Otros ritmos",d:"Galope, guaracha montubia y caminante"},{t:"Instrumento",d:"Caja tambora"}],
+   img:"musica.jpg", pie:"[Descripción]. Fuente: [fuente].", fuentes:"Macías Ferrin (2020)." },
 
-        {
-          id: "juegos",
-          nav: "Juegos",
-          titulo: "Juegos tradicionales",
-          autor: "Rosa Núñez",
-          texto: ["[Párrafo introductorio sobre los juegos tradicionales.]"],
-          items: [
-            {
-              t: "Juego 1",
-              d: "Origen: [..]. Reglas: [..]. Importancia: [..].",
-            },
-            {
-              t: "Juego 2",
-              d: "Origen: [..]. Reglas: [..]. Importancia: [..].",
-            },
-          ],
-          img: "juegos.jpg",
-          pie: "[Descripción]. Fuente: [fuente].",
-          fuentes: "(Autor, año)",
-        },
+ { id:"juegos", nav:"Juegos", titulo:"Juegos tradicionales", autor:"Rosa Núñez",
+   texto:[
+    "<strong>Origen.</strong> Los juegos tradicionales se transmiten de generación en generación y reflejan la vida de las comunidades. No tienen un único autor ni una fecha de origen: se aprendieron jugando y se heredaron de padres a hijos. En Manabí se mantienen torneos y fiestas. Por ejemplo, en 2013 Jaramijó recibió los III Juegos Autóctonos, Ancestrales, Populares y Tradicionales del Pueblo Cholo del Ecuador, con participantes de Santa Elena, Los Ríos, El Oro, Guayas y Manabí (Ministerio del Deporte, 2013).",
+    "<strong>Reglas.</strong> En ese torneo se jugó trompo, cuarenta, palo encebado, ensacados, carrera de tres pies, gallina ciega, huevo con la cuchara, salta la cuerda y rayuela, entre otros (Ministerio del Deporte, 2013).",
+    "<strong>Importancia.</strong> Estos juegos fortalecen la convivencia, la actividad física y la identidad de las comunidades. El Ministerio del Deporte impulsa estos torneos para recuperar las tradiciones de los pueblos (Ministerio del Deporte, 2013)."],
+   items:[
+    {t:"Trompo",d:"Se enrolla un cordel y se lanza el trompo con fuerza para que gire; gana quien lo mantiene girando más tiempo."},
+    {t:"Palo encebado",d:"Se debe trepar un poste untado con grasa para llegar a la punta."},
+    {t:"Ensacados",d:"Se corre saltando dentro de un saco; quien se cae o sale del saco queda eliminado."}],
+   img:"juegos.jpg", pie:"[Descripción]. Fuente: [fuente].", fuentes:"Ministerio del Deporte (2013)." },
 
-        {
-          id: "leyendas",
-          nav: "Leyendas",
-          titulo: "Cuentos y leyendas",
-          autor: "Alan Roque",
-          texto: ["[Resumen de la leyenda o cuento.]"],
-          items: [
-            { t: "Origen", d: "[Dato]" },
-            { t: "Significado", d: "[Dato]" },
-            { t: "Mensaje", d: "[Dato]" },
-          ],
-          img: "leyendas.jpg",
-          pie: "[Descripción]. Fuente: [fuente].",
-          fuentes: "(Autor, año)",
-        },
+ { id:"leyendas", nav:"Leyendas", titulo:"Cuentos y leyendas", autor:"Alan Roque",
+   texto:["[Pendiente: Alan Roque aún no entrega su parte.]"],
+   items:[{t:"Origen",d:"[Dato]"},{t:"Significado",d:"[Dato]"},{t:"Mensaje",d:"[Dato]"}],
+   img:"leyendas.jpg", pie:"[Descripción]. Fuente: [fuente].", fuentes:"(Autor, año)" },
 
-        {
-          id: "fiestas",
-          nav: "Fiestas",
-          titulo: "Fiestas y patrimonio",
-          autor: "Alan Roque",
-          texto: [
-            "[Párrafo sobre fiestas tradicionales y patrimonio material e inmaterial.]",
-          ],
-          items: [
-            { t: "Fiestas tradicionales", d: "[Dato]" },
-            { t: "Patrimonio material", d: "[Dato]" },
-            { t: "Patrimonio inmaterial", d: "[Dato]" },
-          ],
-          img: "fiestas.jpg",
-          pie: "[Descripción]. Fuente: [fuente].",
-          fuentes: "(Autor, año)",
-        },
+ { id:"fiestas", nav:"Fiestas", titulo:"Fiestas y patrimonio", autor:"Alan Roque",
+   texto:["[Pendiente: Alan Roque aún no entrega su parte.]"],
+   items:[{t:"Fiestas tradicionales",d:"[Dato]"},{t:"Patrimonio material",d:"[Dato]"},{t:"Patrimonio inmaterial",d:"[Dato]"}],
+   img:"fiestas.jpg", pie:"[Descripción]. Fuente: [fuente].", fuentes:"(Autor, año)" },
 
-        {
-          id: "desarrollo",
-          nav: "Desarrollo local",
-          titulo: "Desarrollo local",
-          autor: "Marcos Toro",
-          texto: [
-            "[Párrafo que relaciona la cultura con el desarrollo de Manabí.]",
-          ],
-          items: [
-            { t: "Economía", d: "[Dato]" },
-            { t: "Educación", d: "[Dato]" },
-            { t: "Turismo", d: "[Dato]" },
-            { t: "Territorio", d: "[Dato]" },
-            { t: "Identidad cultural", d: "[Dato]" },
-          ],
-          img: "desarrollo.jpg",
-          pie: "[Descripción]. Fuente: [fuente].",
-          fuentes: "(Autor, año)",
-        },
+ { id:"desarrollo", nav:"Desarrollo local", titulo:"Desarrollo local", autor:"Marcos Toro",
+   texto:[
+    "La cultura de Manabí es un elemento importante para el desarrollo de la provincia, porque reúne tradiciones, conocimientos, gastronomía, artesanías, festividades y expresiones que se relacionan con la historia y la forma de vida de sus habitantes. El patrimonio cultural inmaterial comprende conocimientos y prácticas que se transmiten entre generaciones y contribuyen al sentido de identidad de las comunidades (INPC, 2020).",
+    "<strong>Economía.</strong> La cultura manabita puede generar oportunidades para productores, artesanos, emprendedores y trabajadores vinculados con la gastronomía y el turismo. Las artesanías, la elaboración del sombrero de paja toquilla, la cerámica, la cestería y otros productos tradicionales forman parte de las actividades culturales de la provincia (Gobierno Provincial de Manabí, 2025). Además, la gastronomía tradicional relaciona los conocimientos culinarios con la producción agrícola y pesquera, lo que beneficia a agricultores, pescadores, cocineros, artesanos y emprendedores locales (Gobierno Provincial de Manabí, 2026).",
+    "<strong>Educación.</strong> Permite que las nuevas generaciones conozcan las tradiciones. El sistema educativo ecuatoriano reconoce la importancia de que los estudiantes conozcan y valoren el patrimonio cultural de sus localidades, provincias y país (Ministerio de Educación, Deporte y Cultura, 2026). En Manabí también se desarrollan actividades culturales y educativas en museos y centros culturales, donde se promueve el aprendizaje y la expresión artística (Ministerio de Educación, Deporte y Cultura, 2026).",
+    "<strong>Turismo.</strong> La cultura manabita es un atractivo por sus tradiciones, gastronomía, patrimonio arqueológico, artesanías y expresiones culturales. Un ejemplo es el sitio patrimonial Cerro de Hojas-Jaboncillo, relacionado con la cultura manteña, que combina valores históricos, culturales y ecológicos y recibe visitantes (INPC, 2020). Además, la provincia ha desarrollado rutas culturales que integran los 22 cantones con fines turísticos, pedagógicos y de difusión cultural (Gobierno Provincial de Manabí, 2025).",
+    "<strong>Territorio.</strong> Las tradiciones y actividades culturales se desarrollan en espacios rurales y urbanos y se vinculan con la agricultura, la pesca, la gastronomía y las formas de vida de las comunidades. La planificación territorial de Manabí reconoce la importancia de fortalecer la identidad y poner en valor sus recursos patrimoniales y culturales (Gobierno Provincial de Manabí, 2021).",
+    "<strong>Identidad cultural.</strong> La cultura permite reconocer las costumbres, conocimientos y expresiones que distinguen a los manabitas. La gastronomía, la tradición oral, las artesanías y las costumbres montubias forman parte de la memoria colectiva y fortalecen el sentido de pertenencia (Gobierno Provincial de Manabí, 2025)."],
+   items:[], img:"desarrollo.jpg", pie:"[Descripción]. Fuente: [fuente].",
+   fuentes:"INPC (2020); Gobierno Provincial de Manabí (2021, 2025, 2026); Ministerio de Educación, Deporte y Cultura (2026)." },
 
-        {
-          id: "gobernanza",
-          nav: "Gobernanza",
-          titulo: "Gobernanza y patrimonio",
-          autor: "Marcos Toro",
-          texto: ["[Párrafo sobre cómo se cuida y comunica el patrimonio.]"],
-          items: [
-            { t: "Participación ciudadana", d: "[Dato]" },
-            { t: "Conservación cultural", d: "[Dato]" },
-            { t: "Igualdad", d: "[Dato]" },
-            { t: "Comunicación del patrimonio", d: "[Dato]" },
-          ],
-          img: "gobernanza.jpg",
-          pie: "[Descripción]. Fuente: [fuente].",
-          fuentes: "(Autor, año)",
-        },
+ { id:"gobernanza", nav:"Gobernanza", titulo:"Gobernanza y patrimonio", autor:"Marcos Toro",
+   texto:[
+    "La gobernanza del patrimonio cultural requiere la participación de instituciones públicas, comunidades, gestores culturales, organizaciones y ciudadanía. En Manabí se han impulsado procesos de planificación participativa para identificar y fortalecer los elementos culturales de los cantones de la provincia (Gobierno Provincial de Manabí, 2025).",
+    "<strong>Participación ciudadana.</strong> Permite que las comunidades aporten sus conocimientos y experiencias sobre las tradiciones de sus territorios. La elaboración de las rutas culturales de Manabí contó con gestores culturales y autoridades, con el objetivo de visibilizar el patrimonio y fortalecer la gestión cultural territorial (Gobierno Provincial de Manabí, 2025).",
+    "<strong>Conservación cultural.</strong> Busca proteger tanto los bienes materiales como las manifestaciones inmateriales. En Manabí se desarrollan acciones para documentar y salvaguardar expresiones como el amorfino, la gastronomía y los conocimientos tradicionales ligados al territorio y a la producción agroalimentaria (Gobierno Provincial de Manabí, 2026).",
+    "<strong>Igualdad.</strong> Implica reconocer y respetar la diversidad cultural de la provincia, permitiendo que distintas comunidades y grupos participen en la vida cultural. La legislación cultural ecuatoriana reconoce el derecho de las personas y comunidades a construir y mantener su identidad cultural y a expresar sus propias manifestaciones (INPC, 2016).",
+    "<strong>Comunicación del patrimonio.</strong> Permite difundir las tradiciones y conocimientos de Manabí mediante actividades educativas, medios de comunicación y herramientas digitales. La cartografía de rutas culturales incorpora recursos digitales con fines pedagógicos, turísticos y de gestión cultural (Gobierno Provincial de Manabí, 2025)."],
+   items:[], img:"gobernanza.jpg", pie:"[Descripción]. Fuente: [fuente].",
+   fuentes:"Gobierno Provincial de Manabí (2025, 2026); INPC (2016)." },
 
-        {
-          id: "innovacion",
-          nav: "Innovación",
-          titulo: "Innovación: infografía y video",
-          autor: "Julieth Caicedo y Jennifer Hernández",
-          texto: [
-            "Manabí en cifras y cultura, y el recorrido visual “Manabí, cultura viva”.",
-          ],
-          items: [],
-          especial: "innovacion",
-        },
+ { id:"innovacion", nav:"Innovación", titulo:"Innovación: infografía y video", autor:"Julieth Caicedo y Jennifer Hernández",
+   texto:["Manabí en cifras y cultura, y el recorrido visual “Manabí, cultura viva”."],
+   items:[], especial:"innovacion" },
 
-        {
-          id: "referencias",
-          nav: "Referencias",
-          titulo: "Referencias",
-          autor: "Formato APA, 7.ª edición",
-          texto: [],
-          items: [],
-          especial: "referencias",
-        },
-      ];
+ { id:"referencias", nav:"Referencias", titulo:"Referencias", autor:"Formato APA, 7.ª edición",
+   texto:[], items:[], especial:"referencias" }
+];
 
-      const REFERENCIAS = [
-        "Apellido, N. (Año). Título del libro en cursiva. Editorial. URL",
-        "Instituto Nacional de Patrimonio Cultural. (Año). Título del documento. URL",
-        "Ministerio de Cultura y Patrimonio. (Año). Título del documento. URL",
-        "Gobierno Autónomo Descentralizado Provincial de Manabí. (Año). Título del documento. URL",
-      ];
+const A = (u) => `<a href="${u}" target="_blank" rel="noopener">${u}</a>`;
+const REFERENCIAS = [
+  `Alcívar Intriago, J. (2019). Estudio de la producción literaria en Manabí en el período 1960-2017. <em>Revista de Ciencias Humanísticas y Sociales (ReHuSo), 4</em>(1), 32-40. ${A("https://www.redalyc.org/articulo.oa?id=673171021003")}`,
+  `Consorcio de Gobiernos Autónomos Provinciales del Ecuador. (s. f.). <em>Provincia de Manabí</em>. ${A("https://www.congope.gob.ec/provincia-de-manabi/")}`,
+  `Duarte-Casar, R., Intriago-Valarezo, R., Buzetta-Ricaurte, F., y Rojas-Le-Fort, M. (2023). Viche: Encontrabilidad, tendencias e ingredientes de una sopa emblemática manabita en búsquedas de Internet. <em>Revista de Gastronomía y Cocina, 2</em>(1), 020102. ${A("https://doi.org/10.70221/rgc.7640552")}`,
+  `Gobernación de Manabí. (s. f.-a). <em>Reseña histórica</em>. ${A("https://gobernacionmanabi.gob.ec/resena-historica/")}`,
+  `Gobernación de Manabí. (s. f.-b). <em>INPC inauguró la casa patrimonial Sara Cedeño de Vélez, nueva sede de la Regional 4</em>. ${A("http://gobernacionmanabi.gob.ec/inpc-inauguro-la-casa-patrimonial-sara-cedeno-de-velez-nueva-sede-de-la-regional-4/")}`,
+  `Gobierno Provincial de Manabí. (2021). <em>Plan de Desarrollo y Ordenamiento Territorial Manabí 2030</em>. ${A("https://www.manabi.gob.ec/wp-content/uploads/2021/09/I_PDOT_Manabi_2030_compressed.pdf")}`,
+  `Gobierno Provincial de Manabí. (2025, 25 de septiembre). <em>Manabí ya cuenta con una cartografía de rutas culturales con fines turísticos</em>. ${A("https://www.manabi.gob.ec/index.php/manabi-ya-cuenta-con-una-cartografia-de-rutas-culturales-con-fines-turisticos/")}`,
+  `Gobierno Provincial de Manabí. (2026, 8 de septiembre). <em>Manabí fortalece la protección de su patrimonio cultural</em>. ${A("https://www.manabi.gob.ec/index.php/manabi-fortalece-la-proteccion-de-su-patrimonio-cultural/")}`,
+  `Instituto Nacional de Patrimonio Cultural. (s. f.). <em>Bahía de Caráquez</em>. ${A("https://www.patrimoniocultural.gob.ec/bahia-de-caraquez/")}`,
+  `Instituto Nacional de Patrimonio Cultural. (2012). <em>El tejido tradicional del sombrero de paja toquilla ecuatoriano</em>. ${A("https://www.patrimoniocultural.gob.ec/wp-content/uploads/2023/03/20_elsombrerodepajatoquillainpc2012.pdf")}`,
+  `Instituto Nacional de Patrimonio Cultural. (2016). <em>Ley Orgánica de Cultura</em>. ${A("https://site.inpc.gob.ec/pdfs/lotaip2017/Ley_Organica_de_Cultura_2016.pdf")}`,
+  `Instituto Nacional de Patrimonio Cultural. (2019). <em>Representantes del Sistema Regional de Cultura y USGP promueven declaratoria para Manabí como “Provincia chola-montubia”</em>. ${A("https://www.patrimoniocultural.gob.ec/representantes-del-sistema-regional-de-cultura-y-usgp-promueven-declaratoria-para-manabi-como-provincia-chola-montubia/")}`,
+  `Instituto Nacional de Patrimonio Cultural. (2020, 7 de enero). <em>Cerro de Hojas–Jaboncillo se consolida como un sitio patrimonial y turístico del Ecuador</em>. ${A("https://www.patrimoniocultural.gob.ec/cerro-de-hojas-jaboncillo-se-consolida-como-un-sitio-patrimonial-y-turistico-del-ecuador/")}`,
+  `Macías Ferrin, L. A. (2020). La caja-tambora montuvia. <em>Tercio Creciente, 17</em>(17), 71-81. ${A("https://doi.org/10.17561/rtc.n17.5")}`,
+  `Ministerio de Cultura y Patrimonio. (s. f.). <em>Jama Coaque (350 a.C. - 1532 d.C.)</em>. ${A("https://www.culturaypatrimonio.gob.ec/jama-coaque-350-a-c-1532-d-c/")}`,
+  `Ministerio de Cultura y Patrimonio. (2022). <em>La Red de Museos del Ministerio de Cultura y Patrimonio está activada a escala nacional</em>. ${A("https://www.culturaypatrimonio.gob.ec/la-red-de-museos-del-ministerio-de-cultura-y-patrimonio-esta-activada-a-escala-nacional/")}`,
+  `Ministerio de Educación, Deporte y Cultura. (2026, 9 de abril). <em>Ministra Gilda Alcívar García cumple agenda en Manabí fortaleciendo la formación cultural, la educación superior y el diálogo institucional</em>. ${A("https://educacion.gob.ec/ministra-gilda-alcivar-garcia-cumple-agenda-en-manabi-fortaleciendo-la-formacion-cultural-la-educacion-superior-y-el-dialogo-institucional/")}`,
+  `Ministerio del Deporte. (2013, 13 de septiembre). <em>Ya se viven los Juegos Cholos en Manabí</em>. ${A("https://educacion.gob.ec/deporte/ya-se-viven-los-juegos-cholos-en-manabi/")}`,
+  `Ministerio de Turismo. (2017). <em>Declaratoria del sombrero de paja toquilla como Patrimonio Inmaterial de la Humanidad se recordará en Manabí</em>. ${A("https://www.turismo.gob.ec/declaratoria-del-sombrero-de-paja-toquilla-como-patrimonio-inmaterial-de-la-humanidad-se-recordara-en-manabi/")}`,
+  `Suárez Baque, T. L. (2023). <em>Las costumbres y tradiciones y su importancia en los habitantes de la parroquia La América, del cantón Jipijapa, provincia de Manabí</em> [Tesis de grado, Universidad Estatal del Sur de Manabí]. Repositorio Digital UNESUM. ${A("https://repositorio.unesum.edu.ec/handle/53000/5633")}`
+];
 
-      /* ===================== NO NECESITAS TOCAR DESDE AQUÍ ===================== */
-      const ph = (src, etiqueta) =>
-        `<div class="ph"><span>${etiqueta}<br>(img/${src})</span><img src="img/${src}" alt="${etiqueta}" onerror="this.remove()"></div>`;
+/* ===================== NO NECESITAS TOCAR DESDE AQUÍ ===================== */
+const ph = (src, etiqueta) =>
+  `<div class="ph"><span>${etiqueta}<br>(img/${src})</span><img src="img/${src}" alt="${etiqueta}" onerror="this.remove()"></div>`;
 
-      const medios = () => {
-        const v = SITIO.video
-          ? `<iframe src="${SITIO.video}" title="Manabí, cultura viva" allowfullscreen loading="lazy"></iframe>`
-          : SITIO.videoArchivo
-            ? `<video controls style="width:100%;border-radius:6px" src="${SITIO.videoArchivo}"></video>`
-            : `<div class="ph" style="aspect-ratio:16/9"><span>Video “Manabí, cultura viva”<br>(pega la URL en SITIO.video)</span></div>`;
-        return `<div class="media"><figure style="margin:0">${ph("infografia.png", "Infografía: Manabí en cifras y cultura")}<figcaption>Infografía “Manabí en cifras y cultura”.</figcaption></figure>
+const medios = () => {
+  const v = SITIO.video
+    ? `<iframe src="${SITIO.video}" title="Manabí, cultura viva" allowfullscreen loading="lazy"></iframe>`
+    : SITIO.videoArchivo
+      ? `<video controls style="width:100%;border-radius:6px" src="${SITIO.videoArchivo}"></video>`
+      : `<div class="ph" style="aspect-ratio:16/9"><span>Video “Manabí, cultura viva”<br>(pega la URL en SITIO.video)</span></div>`;
+  return `<div class="media"><figure style="margin:0">${ph("infografia.png","Infografía: Manabí en cifras y cultura")}<figcaption>Infografía “Manabí en cifras y cultura”.</figcaption></figure>
   <figure style="margin:0">${v}<figcaption>Video “Manabí, cultura viva”.</figcaption></figure></div>`;
-      };
+};
 
-      document.getElementById("menu").innerHTML =
-        `<a href="#inicio">Inicio</a>` +
-        SECCIONES.map((s) => `<a href="#${s.id}">${s.nav}</a>`).join("");
+document.getElementById("menu").innerHTML =
+  `<a href="#inicio">Inicio</a>` + SECCIONES.map(s => `<a href="#${s.id}">${s.nav}</a>`).join("");
 
-      document.getElementById("contenido").innerHTML = SECCIONES.map((s) => {
-        const parrafos = s.texto.map((p) => `<p>${p}</p>`).join("");
-        const items = s.items.length
-          ? `<div class="items">${s.items.map((i) => `<div class="item"><h3>${i.t}</h3><p>${i.d}</p></div>`).join("")}</div>`
-          : "";
-        let cuerpo;
-        if (s.especial === "innovacion")
-          cuerpo = `<div class="txt">${parrafos}</div>${medios()}`;
-        else if (s.especial === "referencias")
-          cuerpo = `<ol class="refs" style="padding:0">${REFERENCIAS.map((r) => `<li>${r}</li>`).join("")}</ol>`;
-        else
-          cuerpo = `<div class="cols"><div class="txt">${parrafos}<p class="fuentes">Fuentes: ${s.fuentes}</p></div>
-    <figure style="margin:0">${ph(s.img, s.pie.split(".")[0])}<figcaption>${s.pie}</figcaption></figure></div>${items}`;
-        return `<section id="${s.id}"><div class="in"><h2>${s.titulo}</h2><p class="autor">${s.autor}</p>${cuerpo}</div></section>`;
-      }).join("");
+document.getElementById("contenido").innerHTML = SECCIONES.map(s => {
+  const parrafos = s.texto.map(p => `<p>${p}</p>`).join("");
+  const items = s.items.length
+    ? `<div class="items">${s.items.map(i => `<div class="item"><h3>${i.t}</h3><p>${i.d}</p></div>`).join("")}</div>` : "";
+  let cuerpo;
+  if (s.especial === "innovacion") cuerpo = `<div class="txt">${parrafos}</div>${medios()}`;
+  else if (s.especial === "referencias") cuerpo = `<ol class="refs" style="padding:0">${REFERENCIAS.map(r => `<li>${r}</li>`).join("")}</ol>`;
+  else cuerpo = `<div class="cols"><div class="txt">${parrafos}<p class="fuentes">Fuentes: ${s.fuentes}</p></div>
+    <figure style="margin:0">${ph(s.img, s.titulo)}<figcaption>${s.pie}</figcaption></figure></div>${items}`;
+  return `<section id="${s.id}"><div class="in"><h2>${s.titulo}</h2><p class="autor">${s.autor}</p>${cuerpo}</div></section>`;
+}).join("");
 
-      document.getElementById("pie-titulo").textContent = SITIO.piTitulo;
-      document.getElementById("pie-texto").textContent = SITIO.piTexto;
-    </script>
-  </body>
+document.getElementById("pie-titulo").textContent = SITIO.piTitulo;
+document.getElementById("pie-texto").textContent = SITIO.piTexto;
+</script>
+</body>
 </html>
