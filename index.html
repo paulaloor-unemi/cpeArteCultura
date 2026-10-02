@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manabí, cultura viva | Patrimonio Cultural Digital del Ecuador</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav id="menu" aria-label="Secciones"></nav>
+
+<header class="hero" id="inicio">
+  <h1>Manabí</h1>
+  <p>Cultura viva: arte, sabores, música y tradiciones de una provincia del Ecuador.</p>
+  <a class="btn" href="#provincia">Explorar el portal</a>
+  <svg viewBox="0 0 1200 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50 C150 90 300 10 450 50 S750 90 900 50 S1100 20 1200 50 V100 H0Z" fill="#f6f9f8"/></svg>
+</header>
+
+<main id="contenido"></main>
+
+<footer>
+  <div class="in">
+    <div>
+      <h3 id="pie-titulo"></h3>
+      <p id="pie-texto"></p>
+    </div>
+    <div class="qr"><span>Coloca img/qr.png</span><img src="img/qr.png" alt="Código QR de acceso al portal" onerror="this.remove()"></div>
+  </div>
+</footer>
+
+<script>
+/* =====================================================================
+   PLANTILLA: TODO EL CONTENIDO SE EDITA AQUÍ (no hace falta tocar el HTML)
+   - Cambia textos entre comillas.
+   - Imágenes: guarda el archivo en la carpeta "img/" y escribe su nombre.
+     Si la imagen no existe, se muestra un recuadro de relleno.
+   - Cada integrante te envía su parte: pégala en "texto" y "items".
+   - Las citas van dentro del texto como (Autor, año) y las fuentes abajo.
+   ===================================================================== */
+
+const SITIO = {
+  piTitulo: "Patrimonio Cultural Digital del Ecuador: Manabí",
+  piTexto: "Proyecto Integrador de Apreciación del Arte y Cultura, UNEMI. Grupo: [NÚMERO DE GRUPO]. Enlace: [PEGAR URL DE GITHUB PAGES].",
+  video: "",   // Pega aquí la URL de incrustación de YouTube, ej: "https://www.youtube.com/embed/XXXXXXXXXXX". Vacío = recuadro de relleno.
+  videoArchivo: "" // Alternativa: archivo de video en la carpeta, ej: "video/manabi.mp4"
+};
+
+const SECCIONES = [
+ { id:"provincia", nav:"Provincia", titulo:"Presentación de la provincia", autor:"Valeska Arguello",
+   texto:["[Párrafo sobre la ubicación de Manabí.]","[Párrafo sobre su historia y datos generales.]"],
+   items:[{t:"Ubicación",d:"[Dato]"},{t:"Capital",d:"[Dato]"},{t:"Cantones",d:"[Dato]"},{t:"Población",d:"[Dato]"}],
+   img:"mapa-manabi.jpg", pie:"Mapa de la provincia de Manabí. Fuente: [fuente].",
+   fuentes:"(Autor, año)" },
+
+ { id:"arte", nav:"Arte y patrimonio", titulo:"Arte y patrimonio", autor:"Valeska Arguello",
+   texto:["[Párrafo sobre arte, arquitectura, literatura y patrimonio cultural de Manabí.]"],
+   items:[{t:"Arte",d:"[Descripción]"},{t:"Arquitectura",d:"[Descripción]"},{t:"Literatura",d:"[Descripción]"},{t:"Patrimonio cultural",d:"[Descripción]"}],
+   img:"arte.jpg", pie:"[Descripción de la imagen]. Fuente: [fuente].", fuentes:"(Autor, año)" },
+
+ { id:"cultura", nav:"Cultura", titulo:"Cultura", autor:"Gabriela Chuchuca",
+   texto:["[Párrafo sobre pueblos, nacionalidades, lenguas y tradiciones.]"],
+   items:[{t:"Pueblos y nacionalidades",d:"[Dato]"},{t:"Lenguas",d:"[Dato]"},{t:"Tradiciones",d:"[Dato]"}],
+   img:"cultura.jpg", pie:"[Descripción]. Fuente: [fuente].", fuentes:"(Autor, año)" },
+
+ { id:"gastronomia", nav:"Gastronomía", titulo:"Gastronomía", autor:"Gabriela Chuchuca",
+   texto:["[Introducción a la gastronomía de Manabí.]"],
+   items:[{t:"Plato típico 1",d:"Ingredientes: [..]. Historia: [..]."},{t:"Plato típico 2",d:"Ingredientes: [..]. Historia: [..]."},
+          {t:"Plato típico 3",d:"Ingredientes: [..]. Historia: [..]."},{t:"Plato típico 4",d:"Ingredientes: [..]. Historia: [..]."},
+          {t:"Plato típico 5",d:"Ingredientes: [..]. Historia: [..]."}],
+   img:"gastronomia.jpg", pie:"[Descripción]. Fuente: [fuente].", fuentes:"(Autor, año)" },
+
+ { id:"musica", nav:"Música", titulo:"Música", autor:"Rosa Núñez",
+   texto:["[Párrafo sobre ritmos, instrumentos y artistas.]"],
+   items:[{t:"Ritmos",d:"[Dato]"},{t:"Instrumentos",d:"[Dato]"},{t:"Artistas",d:"[Dato]"}],
+   img:"musica.jpg", pie:"[Descripción]. Fuente: [fuente].", fuentes:"(Autor, año)" },
+
+ { id:"juegos", nav:"Juegos", titulo:"Juegos tradicionales", autor:"Rosa Núñez",
+   texto:["[Párrafo introductorio sobre los juegos tradicionales.]"],
+   items:[{t:"Juego 1",d:"Origen: [..]. Reglas: [..]. Importancia: [..]."},{t:"Juego 2",d:"Origen: [..]. Reglas: [..]. Importancia: [..]."}],
+   img:"juegos.jpg", pie:"[Descripción]. Fuente: [fuente].", fuentes:"(Autor, año)" },
+
+ { id:"leyendas", nav:"Leyendas", titulo:"Cuentos y leyendas", autor:"Alan Roque",
+   texto:["[Resumen de la leyenda o cuento.]"],
+   items:[{t:"Origen",d:"[Dato]"},{t:"Significado",d:"[Dato]"},{t:"Mensaje",d:"[Dato]"}],
+   img:"leyendas.jpg", pie:"[Descripción]. Fuente: [fuente].", fuentes:"(Autor, año)" },
+
+ { id:"fiestas", nav:"Fiestas", titulo:"Fiestas y patrimonio", autor:"Alan Roque",
+   texto:["[Párrafo sobre fiestas tradicionales y patrimonio material e inmaterial.]"],
+   items:[{t:"Fiestas tradicionales",d:"[Dato]"},{t:"Patrimonio material",d:"[Dato]"},{t:"Patrimonio inmaterial",d:"[Dato]"}],
+   img:"fiestas.jpg", pie:"[Descripción]. Fuente: [fuente].", fuentes:"(Autor, año)" },
+
+ { id:"desarrollo", nav:"Desarrollo local", titulo:"Desarrollo local", autor:"Marcos Toro",
+   texto:["[Párrafo que relaciona la cultura con el desarrollo de Manabí.]"],
+   items:[{t:"Economía",d:"[Dato]"},{t:"Educación",d:"[Dato]"},{t:"Turismo",d:"[Dato]"},{t:"Territorio",d:"[Dato]"},{t:"Identidad cultural",d:"[Dato]"}],
+   img:"desarrollo.jpg", pie:"[Descripción]. Fuente: [fuente].", fuentes:"(Autor, año)" },
+
+ { id:"gobernanza", nav:"Gobernanza", titulo:"Gobernanza y patrimonio", autor:"Marcos Toro",
+   texto:["[Párrafo sobre cómo se cuida y comunica el patrimonio.]"],
+   items:[{t:"Participación ciudadana",d:"[Dato]"},{t:"Conservación cultural",d:"[Dato]"},{t:"Igualdad",d:"[Dato]"},{t:"Comunicación del patrimonio",d:"[Dato]"}],
+   img:"gobernanza.jpg", pie:"[Descripción]. Fuente: [fuente].", fuentes:"(Autor, año)" },
+
+ { id:"innovacion", nav:"Innovación", titulo:"Innovación: infografía y video", autor:"Julieth Caicedo y Jennifer Hernández",
+   texto:["Manabí en cifras y cultura, y el recorrido visual “Manabí, cultura viva”."],
+   items:[], especial:"innovacion" },
+
+ { id:"referencias", nav:"Referencias", titulo:"Referencias", autor:"Formato APA, 7.ª edición",
+   texto:[], items:[], especial:"referencias" }
+];
+
+const REFERENCIAS = [
+  "Apellido, N. (Año). Título del libro en cursiva. Editorial. URL",
+  "Instituto Nacional de Patrimonio Cultural. (Año). Título del documento. URL",
+  "Ministerio de Cultura y Patrimonio. (Año). Título del documento. URL",
+  "Gobierno Autónomo Descentralizado Provincial de Manabí. (Año). Título del documento. URL"
+];
+
+/* ===================== NO NECESITAS TOCAR DESDE AQUÍ ===================== */
+const ph = (src, etiqueta) =>
+  `<div class="ph"><span>${etiqueta}<br>(img/${src})</span><img src="img/${src}" alt="${etiqueta}" onerror="this.remove()"></div>`;
+
+const medios = () => {
+  const v = SITIO.video
+    ? `<iframe src="${SITIO.video}" title="Manabí, cultura viva" allowfullscreen loading="lazy"></iframe>`
+    : SITIO.videoArchivo
+      ? `<video controls style="width:100%;border-radius:6px" src="${SITIO.videoArchivo}"></video>`
+      : `<div class="ph" style="aspect-ratio:16/9"><span>Video “Manabí, cultura viva”<br>(pega la URL en SITIO.video)</span></div>`;
+  return `<div class="media"><figure style="margin:0">${ph("infografia.png","Infografía: Manabí en cifras y cultura")}<figcaption>Infografía “Manabí en cifras y cultura”.</figcaption></figure>
+  <figure style="margin:0">${v}<figcaption>Video “Manabí, cultura viva”.</figcaption></figure></div>`;
+};
+
+document.getElementById("menu").innerHTML =
+  `<a href="#inicio">Inicio</a>` + SECCIONES.map(s => `<a href="#${s.id}">${s.nav}</a>`).join("");
+
+document.getElementById("contenido").innerHTML = SECCIONES.map(s => {
+  const parrafos = s.texto.map(p => `<p>${p}</p>`).join("");
+  const items = s.items.length
+    ? `<div class="items">${s.items.map(i => `<div class="item"><h3>${i.t}</h3><p>${i.d}</p></div>`).join("")}</div>` : "";
+  let cuerpo;
+  if (s.especial === "innovacion") cuerpo = `<div class="txt">${parrafos}</div>${medios()}`;
+  else if (s.especial === "referencias") cuerpo = `<ol class="refs" style="padding:0">${REFERENCIAS.map(r => `<li>${r}</li>`).join("")}</ol>`;
+  else cuerpo = `<div class="cols"><div class="txt">${parrafos}<p class="fuentes">Fuentes: ${s.fuentes}</p></div>
+    <figure style="margin:0">${ph(s.img, s.pie.split(".")[0])}<figcaption>${s.pie}</figcaption></figure></div>${items}`;
+  return `<section id="${s.id}"><div class="in"><h2>${s.titulo}</h2><p class="autor">${s.autor}</p>${cuerpo}</div></section>`;
+}).join("");
+
+document.getElementById("pie-titulo").textContent = SITIO.piTitulo;
+document.getElementById("pie-texto").textContent = SITIO.piTexto;
+</script>
+</body>
+</html>
