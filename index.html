@@ -7,6 +7,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+.btn-ref{display:inline-block;margin-top:8px;background:var(--mar);color:#fff;padding:12px 22px;border-radius:999px;font:800 16px var(--ft-t);text-decoration:none}
+.btn-ref:hover{background:var(--tinta)}
+#provincia .ph{aspect-ratio:1/1;background:#fff}
+#provincia .ph img{object-fit:contain;background:#fff}
+@media(min-width:761px){#provincia .cols{grid-template-columns:1fr 1.3fr}}
+</style>
 </head>
 <body>
 
@@ -61,7 +68,7 @@ const SECCIONES = [
     "<strong>Literatura.</strong> Horacio Hidrovo Velásquez publicó en 1957 “Un hombre y un río”, considerado el libro más leído en Manabí (Alcívar Intriago, 2019). Su hijo, Horacio Hidrovo Peñaherrera, continuó la tradición de la literatura manabita.",
     "<strong>Patrimonio cultural.</strong> El origen del tejido del sombrero de paja toquilla se localiza en Manabí (INPC, 2012). La UNESCO lo declaró Patrimonio Inmaterial de la Humanidad en 2012 (Ministerio de Turismo, 2017)."],
    items:[],
-   img:"arte.jpg", pie:"[Descripción de la imagen]. Fuente: [fuente].",
+   img:"arte.jpg", pie:"Arte y patrimonio de Manabí.",
    fuentes:"Ministerio de Cultura y Patrimonio (2022, s. f.); INPC (s. f., 2012); Gobernación de Manabí (s. f.-b); Alcívar Intriago (2019); Ministerio de Turismo (2017)." },
 
  { id:"cultura", nav:"Cultura", titulo:"Cultura",
@@ -71,7 +78,7 @@ const SECCIONES = [
     "<strong>Lenguas.</strong> En la actualidad el castellano es la lengua de uso predominante en las comunidades manabitas. Por ejemplo, el registro de patrimonio cultural inmaterial de la provincia identifica al grupo montubio y al castellano como elementos relacionados con determinadas manifestaciones de tradición oral (Torres Pihuave, 2024).",
     "<strong>Tradiciones.</strong> Entre las más representativas están los amorfinos, las fiestas comunitarias, las prácticas agrícolas y pesqueras, la elaboración artesanal y diferentes costumbres gastronómicas. En las comunidades de Jipijapa, por ejemplo, se han registrado fiestas patronales, juegos tradicionales, medicina tradicional mediante plantas y el uso del horno de leña como parte de las prácticas culturales locales (Suárez Baque, 2023)."],
    items:[],
-   img:"cultura.jpg", pie:"[Descripción]. Fuente: [fuente].",
+   img:"cultura.jpg", pie:"Pesca artesanal en Crucita, Manabí. Fuente: Manabí Noticias (manabinoticias.com).",
    fuentes:"INPC (2015); Gobierno Provincial de Manabí (2023); Torres Pihuave (2024); Suárez Baque (2023)." },
 
  { id:"gastronomia", nav:"Gastronomía", titulo:"Gastronomía",
@@ -82,7 +89,7 @@ const SECCIONES = [
     {t:"Corviche",d:"<em>Ingredientes:</em> plátano verde, maní y pescado o mariscos. <em>Historia:</em> forma parte de los platos con sufijo “iche” de raíz aborigen (Mes del Manabitismo, 2025)."},
     {t:"Ceviche de Jipijapa",d:"<em>Ingredientes:</em> marisco o pescado con salsa de maní. <em>Historia:</em> es uno de los platos emblemáticos de la provincia y se prepara con un toque propio de Jipijapa (Manabí es designada, 2024)."},
     {t:"Caldo de gallina criolla",d:"<em>Ingredientes:</em> gallina criolla, verduras, yuca, plátano y condimentos. <em>Historia:</em> preparación tradicional de las zonas rurales y parte de la cocina familiar manabita. La gallina criolla se incorporó a la alimentación de la región y hoy se usa en caldos y otros platos (Alvarado et al., 2021)."}],
-   img:"gastronomia.jpg", pie:"[Descripción]. Fuente: [fuente].",
+   img:"gastronomia.jpg", pie:"Gastronomía manabita.",
    fuentes:"Duarte-Casar y Parreño-García (2025); Mes del Manabitismo (2025); Alvarado et al. (2021)." },
 
  { id:"musica", nav:"Música", titulo:"Música",
@@ -91,26 +98,11 @@ const SECCIONES = [
     "<strong>Instrumentos.</strong> Uno de los más característicos es la caja tambora, un instrumento de percusión elaborado con maderas del campo manabita e incrustaciones de bambú. Tiene forma octagonal, porque este diseño favorece la riqueza del sonido, y un orificio en la parte superior por donde sale el aire. Produce sonidos agudos en su lado izquierdo y graves-medios en el derecho. Su función es llevar la célula rítmica que los montubios usan para el amorfino (Macías Ferrin, 2020).",
     "<strong>Artistas.</strong> Entre quienes han aportado a esta música está Luis Andrés Macías Ferrin, de la Universidad Laica Eloy Alfaro de Manabí, quien estudia la caja tambora y su papel en la música montubia. También se reconoce el trabajo del folclorólogo Manuel de Jesús Álvarez, uno de los pocos autores que investigó la historia del amorfino. La caja tambora surgió de la necesidad de crear nuevas memorias culturales a partir de la música de tradición oral montubia, lo que muestra que esta herencia sigue viva y se renueva (Macías Ferrin, 2020)."],
    items:[{t:"Ritmo principal",d:"Amorfino"},{t:"Otros ritmos",d:"Galope, guaracha montubia y caminante"},{t:"Instrumento",d:"Caja tambora"}],
-   img:"musica.jpg", pie:"[Descripción]. Fuente: [fuente].", fuentes:"Macías Ferrin (2020)." },
+   img:"musica.jpg", pie:"Música tradicional de Manabí.", fuentes:"Macías Ferrin (2020)." },
 
- { id:"referencias", nav:"Referencias", titulo:"Referencias",
-   texto:[], items:[], especial:"referencias" }
-];
-
-const A = (u) => `<a href="${u}" target="_blank" rel="noopener">${u}</a>`;
-const REFERENCIAS = [
-  `Alcívar Intriago, J. (2019). Estudio de la producción literaria en Manabí en el período 1960-2017. <em>Revista de Ciencias Humanísticas y Sociales (ReHuSo), 4</em>(1), 32-40. ${A("https://www.redalyc.org/articulo.oa?id=673171021003")}`,
-  `Consorcio de Gobiernos Autónomos Provinciales del Ecuador. (s. f.). <em>Provincia de Manabí</em>. ${A("https://www.congope.gob.ec/provincia-de-manabi/")}`,
-  `Duarte-Casar, R., Intriago-Valarezo, R., Buzetta-Ricaurte, F., y Rojas-Le-Fort, M. (2023). Viche: Encontrabilidad, tendencias e ingredientes de una sopa emblemática manabita en búsquedas de Internet. <em>Revista de Gastronomía y Cocina, 2</em>(1), 020102. ${A("https://doi.org/10.70221/rgc.7640552")}`,
-  `Gobernación de Manabí. (s. f.-a). <em>Reseña histórica</em>. ${A("https://gobernacionmanabi.gob.ec/resena-historica/")}`,
-  `Gobernación de Manabí. (s. f.-b). <em>INPC inauguró la casa patrimonial Sara Cedeño de Vélez, nueva sede de la Regional 4</em>. ${A("http://gobernacionmanabi.gob.ec/inpc-inauguro-la-casa-patrimonial-sara-cedeno-de-velez-nueva-sede-de-la-regional-4/")}`,
-  `Instituto Nacional de Patrimonio Cultural. (s. f.). <em>Bahía de Caráquez</em>. ${A("https://www.patrimoniocultural.gob.ec/bahia-de-caraquez/")}`,
-  `Instituto Nacional de Patrimonio Cultural. (2012). <em>El tejido tradicional del sombrero de paja toquilla ecuatoriano</em>. ${A("https://www.patrimoniocultural.gob.ec/wp-content/uploads/2023/03/20_elsombrerodepajatoquillainpc2012.pdf")}`,
-  `Macías Ferrin, L. A. (2020). La caja-tambora montuvia. <em>Tercio Creciente, 17</em>(17), 71-81. ${A("https://doi.org/10.17561/rtc.n17.5")}`,
-  `Ministerio de Cultura y Patrimonio. (s. f.). <em>Jama Coaque (350 a.C. - 1532 d.C.)</em>. ${A("https://www.culturaypatrimonio.gob.ec/jama-coaque-350-a-c-1532-d-c/")}`,
-  `Ministerio de Cultura y Patrimonio. (2022). <em>La Red de Museos del Ministerio de Cultura y Patrimonio está activada a escala nacional</em>. ${A("https://www.culturaypatrimonio.gob.ec/la-red-de-museos-del-ministerio-de-cultura-y-patrimonio-esta-activada-a-escala-nacional/")}`,
-  `Ministerio de Turismo. (2017). <em>Declaratoria del sombrero de paja toquilla como Patrimonio Inmaterial de la Humanidad se recordará en Manabí</em>. ${A("https://www.turismo.gob.ec/declaratoria-del-sombrero-de-paja-toquilla-como-patrimonio-inmaterial-de-la-humanidad-se-recordara-en-manabi/")}`,
-  `Suárez Baque, T. L. (2023). <em>Las costumbres y tradiciones y su importancia en los habitantes de la parroquia La América, del cantón Jipijapa, provincia de Manabí</em> [Tesis de grado, Universidad Estatal del Sur de Manabí]. Repositorio Digital UNESUM. ${A("https://repositorio.unesum.edu.ec/handle/53000/5633")}`
+ { id:"referencias", nav:"Referencias", titulo:"Referencias", href:"referencias.html",
+   texto:["Consulta la lista completa de fuentes utilizadas en este portal, en formato APA (7.ª edición)."],
+   items:[], especial:"referencias" }
 ];
 
 /* ===================== NO NECESITAS TOCAR DESDE AQUÍ ===================== */
@@ -118,16 +110,16 @@ const ph = (src, etiqueta) =>
   `<div class="ph"><span>${etiqueta}<br>(img/${src})</span><img src="img/${src}" alt="${etiqueta}" onerror="this.remove()"></div>`;
 
 document.getElementById("menu").innerHTML =
-  `<a href="#inicio">Inicio</a>` + SECCIONES.map(s => `<a href="#${s.id}">${s.nav}</a>`).join("");
+  `<a href="#inicio">Inicio</a>` + SECCIONES.map(s => `<a href="${s.href || "#" + s.id}">${s.nav}</a>`).join("");
 
 document.getElementById("contenido").innerHTML = SECCIONES.map(s => {
   const parrafos = s.texto.map(p => `<p>${p}</p>`).join("");
   const items = s.items.length
     ? `<div class="items">${s.items.map(i => `<div class="item"><h3>${i.t}</h3><p>${i.d}</p></div>`).join("")}</div>` : "";
   let cuerpo;
-  if (s.especial === "referencias") cuerpo = `<ol class="refs" style="padding:0">${REFERENCIAS.map(r => `<li>${r}</li>`).join("")}</ol>`;
+  if (s.especial === "referencias") cuerpo = `<div class="txt">${parrafos}</div><a class="btn-ref" href="${s.href}">Ver referencias</a>`;
   else cuerpo = `<div class="cols"><div class="txt">${parrafos}<p class="fuentes">Fuentes: ${s.fuentes}</p></div>
-    <figure style="margin:0">${ph(s.img, s.titulo)}<figcaption>${s.pie}</figcaption></figure></div>${items}`;
+    <figure style="margin:0">${ph(s.img, s.titulo)}${s.pie ? `<figcaption>${s.pie}</figcaption>` : ""}</figure></div>${items}`;
   return `<section id="${s.id}"><div class="in"><h2>${s.titulo}</h2>${cuerpo}</div></section>`;
 }).join("");
 
