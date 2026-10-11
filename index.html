@@ -27,7 +27,6 @@
       <h3 id="pie-titulo"></h3>
       <p id="pie-texto"></p>
     </div>
-    <div class="qr"><span>Coloca img/qr.png</span><img src="img/qr.png" alt="Código QR de acceso al portal" onerror="this.remove()"></div>
   </div>
 </footer>
 
@@ -41,7 +40,8 @@
 
 const SITIO = {
   piTitulo: "Patrimonio Cultural Digital del Ecuador: Manabí",
-  piTexto: "Proyecto Integrador de Apreciación del Arte y Cultura (C5), UNEMI. Grupo 6. Periodo agosto–diciembre 2026. Enlace: https://paulaloor-unemi.github.io/cpeArteCultura/"
+  piTexto: "Proyecto Integrador de Apreciación del Arte y Cultura (C5), UNEMI. Grupo 6. Periodo agosto–diciembre 2026.",
+  enlace: "https://paulaloor-unemi.github.io/cpeArteCultura/"
 };
 
 const SECCIONES = [
@@ -54,7 +54,7 @@ const SECCIONES = [
    img:"mapa-manabi.jpg", pie:"Figura 1. Mapa de la provincia de Manabí. Fuente: paintmaps.com.",
    fuentes:"Gobernación de Manabí (s. f.-a); CONGOPE (s. f.)." },
 
- { id:"arte", nav:"Arte y patrimonio", titulo:"Arte y patrimonio", autor:"Valeska Arguello",
+ { id:"arte", nav:"Arte y patrimonio", titulo:"Arte y patrimonio",
    texto:[
     "<strong>Arte.</strong> Manabí conserva un legado artístico ancestral. El Museo y Centro Cultural Manta muestra elementos de las culturas Valdivia, Machalilla, Chorrera, Jama Coaque, Bahía, Guangala y Manteño, entre ellos las sillas en forma de “U” (Ministerio de Cultura y Patrimonio, 2022). La cultura Jama Coaque destacó por su cerámica hecha por artesanos especializados, con figurillas de músicos, danzantes y agricultores (Ministerio de Cultura y Patrimonio, s. f.).",
     "<strong>Arquitectura.</strong> Bahía de Caráquez recibió la denominación de “ciudad patrimonial” en 1955 por sus bienes históricos, arquitectónicos y culturales (Instituto Nacional de Patrimonio Cultural [INPC], s. f.). En Portoviejo, la casa Sara Cedeño de Vélez, construida hacia 1925 tras el incendio de la ciudad, fue rehabilitada por el INPC conservando su arquitectura original (Gobernación de Manabí, s. f.-b).",
@@ -64,7 +64,7 @@ const SECCIONES = [
    img:"arte.jpg", pie:"[Descripción de la imagen]. Fuente: [fuente].",
    fuentes:"Ministerio de Cultura y Patrimonio (2022, s. f.); INPC (s. f., 2012); Gobernación de Manabí (s. f.-b); Alcívar Intriago (2019); Ministerio de Turismo (2017)." },
 
- { id:"cultura", nav:"Cultura", titulo:"Cultura", autor:"Gabriela Chuchuca",
+ { id:"cultura", nav:"Cultura", titulo:"Cultura",
    texto:[
     "Manabí posee una identidad cultural construida a partir de la relación entre sus comunidades, el territorio costero y las actividades agrícolas, pesqueras y artesanales. Entre sus principales expresiones culturales está el pueblo montubio, cuya presencia es especialmente importante en Manabí y otras provincias de la Costa ecuatoriana. La identidad montubia se relaciona con la vida rural, el trabajo agrícola y ganadero, el uso tradicional del sombrero y el machete, además de expresiones orales como los amorfinos (INPC, 2015).",
     "<strong>Pueblos y nacionalidades.</strong> En la provincia también existen comunidades vinculadas con la cultura cholo pescadora, específicamente en zonas costeras. Su identidad se relaciona con la pesca artesanal, la navegación y el aprovechamiento de los recursos del mar. Estas prácticas se han transmitido entre generaciones y forman parte de la memoria cultural de las comunidades costeras (Gobierno Provincial de Manabí, 2023).",
@@ -74,7 +74,7 @@ const SECCIONES = [
    img:"cultura.jpg", pie:"[Descripción]. Fuente: [fuente].",
    fuentes:"INPC (2015); Gobierno Provincial de Manabí (2023); Torres Pihuave (2024); Suárez Baque (2023)." },
 
- { id:"gastronomia", nav:"Gastronomía", titulo:"Gastronomía", autor:"Gabriela Chuchuca",
+ { id:"gastronomia", nav:"Gastronomía", titulo:"Gastronomía",
    texto:["La gastronomía es una de las principales expresiones de la identidad manabita porque combina productos del mar y del campo. Entre los ingredientes más representativos se encuentran el plátano, el maní, el pescado, los mariscos, el queso y la gallina criolla (Duarte-Casar y Parreño-García, 2025)."],
    items:[
     {t:"Viche",d:"<em>Ingredientes:</em> pescado o mariscos, maní, choclo, maduro, verduras y otros productos locales. <em>Historia:</em> es la sopa más representativa de la provincia. En 2024 Portoviejo preparó el más grande del mundo, de más de 1 900 kg (Mes del Manabitismo, 2025)."},
@@ -85,7 +85,7 @@ const SECCIONES = [
    img:"gastronomia.jpg", pie:"[Descripción]. Fuente: [fuente].",
    fuentes:"Duarte-Casar y Parreño-García (2025); Mes del Manabitismo (2025); Alvarado et al. (2021)." },
 
- { id:"musica", nav:"Música", titulo:"Música", autor:"Rosa Núñez",
+ { id:"musica", nav:"Música", titulo:"Música",
    texto:[
     "<strong>Ritmos.</strong> La música de Manabí está ligada a la cultura montubia y a su tradición oral. Su género más representativo es el amorfino, cuya composición se basa en versos de ocho sílabas. Junto a él se mencionan otros ritmos montubios, como el galope, la guaracha montubia y el caminante (Macías Ferrin, 2020).",
     "<strong>Instrumentos.</strong> Uno de los más característicos es la caja tambora, un instrumento de percusión elaborado con maderas del campo manabita e incrustaciones de bambú. Tiene forma octagonal, porque este diseño favorece la riqueza del sonido, y un orificio en la parte superior por donde sale el aire. Produce sonidos agudos en su lado izquierdo y graves-medios en el derecho. Su función es llevar la célula rítmica que los montubios usan para el amorfino (Macías Ferrin, 2020).",
@@ -93,7 +93,7 @@ const SECCIONES = [
    items:[{t:"Ritmo principal",d:"Amorfino"},{t:"Otros ritmos",d:"Galope, guaracha montubia y caminante"},{t:"Instrumento",d:"Caja tambora"}],
    img:"musica.jpg", pie:"[Descripción]. Fuente: [fuente].", fuentes:"Macías Ferrin (2020)." },
 
- { id:"referencias", nav:"Referencias", titulo:"Referencias", autor:"Formato APA, 7.ª edición",
+ { id:"referencias", nav:"Referencias", titulo:"Referencias",
    texto:[], items:[], especial:"referencias" }
 ];
 
@@ -128,11 +128,12 @@ document.getElementById("contenido").innerHTML = SECCIONES.map(s => {
   if (s.especial === "referencias") cuerpo = `<ol class="refs" style="padding:0">${REFERENCIAS.map(r => `<li>${r}</li>`).join("")}</ol>`;
   else cuerpo = `<div class="cols"><div class="txt">${parrafos}<p class="fuentes">Fuentes: ${s.fuentes}</p></div>
     <figure style="margin:0">${ph(s.img, s.titulo)}<figcaption>${s.pie}</figcaption></figure></div>${items}`;
-  return `<section id="${s.id}"><div class="in"><h2>${s.titulo}</h2><p class="autor">${s.autor}</p>${cuerpo}</div></section>`;
+  return `<section id="${s.id}"><div class="in"><h2>${s.titulo}</h2>${cuerpo}</div></section>`;
 }).join("");
 
 document.getElementById("pie-titulo").textContent = SITIO.piTitulo;
-document.getElementById("pie-texto").textContent = SITIO.piTexto;
+document.getElementById("pie-texto").innerHTML =
+  SITIO.piTexto + ` Enlace: <a href="${SITIO.enlace}" target="_blank" rel="noopener">${SITIO.enlace}</a>`;
 </script>
 </body>
 </html>
