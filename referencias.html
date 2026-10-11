@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Referencias | Manabí, cultura viva</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<nav aria-label="Navegación">
+  <a href="index.html">← Volver al portal</a>
+  <a href="index.html#provincia">Provincia</a>
+  <a href="index.html#arte">Arte y patrimonio</a>
+  <a href="index.html#cultura">Cultura</a>
+  <a href="index.html#gastronomia">Gastronomía</a>
+  <a href="index.html#musica">Música</a>
+</nav>
+
+<section>
+  <div class="in">
+    <h2>Referencias</h2>
+    <ol class="refs" id="lista" style="padding:0"></ol>
+  </div>
+</section>
+
+<footer>
+  <div class="in">
+    <div>
+      <h3>Patrimonio Cultural Digital del Ecuador: Manabí</h3>
+      <p><a href="index.html">Volver al portal</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const A = (u) => `<a href="${u}" target="_blank" rel="noopener">${u}</a>`;
+const REFERENCIAS = [
+  `Alcívar Intriago, J. (2019). Estudio de la producción literaria en Manabí en el período 1960-2017. <em>Revista de Ciencias Humanísticas y Sociales (ReHuSo), 4</em>(1), 32-40. ${A("https://www.redalyc.org/articulo.oa?id=673171021003")}`,
+  `Consorcio de Gobiernos Autónomos Provinciales del Ecuador. (s. f.). <em>Provincia de Manabí</em>. ${A("https://www.congope.gob.ec/provincia-de-manabi/")}`,
+  `Duarte-Casar, R., Intriago-Valarezo, R., Buzetta-Ricaurte, F., y Rojas-Le-Fort, M. (2023). Viche: Encontrabilidad, tendencias e ingredientes de una sopa emblemática manabita en búsquedas de Internet. <em>Revista de Gastronomía y Cocina, 2</em>(1), 020102. ${A("https://doi.org/10.70221/rgc.7640552")}`,
+  `Gobernación de Manabí. (s. f.-a). <em>Reseña histórica</em>. ${A("https://gobernacionmanabi.gob.ec/resena-historica/")}`,
+  `Gobernación de Manabí. (s. f.-b). <em>INPC inauguró la casa patrimonial Sara Cedeño de Vélez, nueva sede de la Regional 4</em>. ${A("http://gobernacionmanabi.gob.ec/inpc-inauguro-la-casa-patrimonial-sara-cedeno-de-velez-nueva-sede-de-la-regional-4/")}`,
+  `Instituto Nacional de Patrimonio Cultural. (s. f.). <em>Bahía de Caráquez</em>. ${A("https://www.patrimoniocultural.gob.ec/bahia-de-caraquez/")}`,
+  `Instituto Nacional de Patrimonio Cultural. (2012). <em>El tejido tradicional del sombrero de paja toquilla ecuatoriano</em>. ${A("https://www.patrimoniocultural.gob.ec/wp-content/uploads/2023/03/20_elsombrerodepajatoquillainpc2012.pdf")}`,
+  `Macías Ferrin, L. A. (2020). La caja-tambora montuvia. <em>Tercio Creciente, 17</em>(17), 71-81. ${A("https://doi.org/10.17561/rtc.n17.5")}`,
+  `Ministerio de Cultura y Patrimonio. (s. f.). <em>Jama Coaque (350 a.C. - 1532 d.C.)</em>. ${A("https://www.culturaypatrimonio.gob.ec/jama-coaque-350-a-c-1532-d-c/")}`,
+  `Ministerio de Cultura y Patrimonio. (2022). <em>La Red de Museos del Ministerio de Cultura y Patrimonio está activada a escala nacional</em>. ${A("https://www.culturaypatrimonio.gob.ec/la-red-de-museos-del-ministerio-de-cultura-y-patrimonio-esta-activada-a-escala-nacional/")}`,
+  `Ministerio de Turismo. (2017). <em>Declaratoria del sombrero de paja toquilla como Patrimonio Inmaterial de la Humanidad se recordará en Manabí</em>. ${A("https://www.turismo.gob.ec/declaratoria-del-sombrero-de-paja-toquilla-como-patrimonio-inmaterial-de-la-humanidad-se-recordara-en-manabi/")}`,
+  `Suárez Baque, T. L. (2023). <em>Las costumbres y tradiciones y su importancia en los habitantes de la parroquia La América, del cantón Jipijapa, provincia de Manabí</em> [Tesis de grado, Universidad Estatal del Sur de Manabí]. Repositorio Digital UNESUM. ${A("https://repositorio.unesum.edu.ec/handle/53000/5633")}`
+];
+document.getElementById("lista").innerHTML = REFERENCIAS.map(r => `<li>${r}</li>`).join("");
+</script>
+</body>
+</html>
