@@ -13,6 +13,8 @@
 #provincia .ph{aspect-ratio:1/1;background:#fff}
 #provincia .ph img{object-fit:contain;background:#fff}
 @media(min-width:761px){#provincia .cols{grid-template-columns:1fr 1.3fr}}
+.sombrero{position:absolute;right:5vw;top:9vh;width:clamp(220px,30vw,460px);height:auto;pointer-events:none;filter:drop-shadow(0 12px 18px rgba(0,0,0,.28))}
+@media(max-width:760px){.sombrero{width:38vw;top:4vh;right:3vw}}
 </style>
 </head>
 <body>
@@ -20,6 +22,7 @@
 <nav id="menu" aria-label="Secciones"></nav>
 
 <header class="hero" id="inicio">
+  <img class="sombrero" src="img/sombrero.png" alt="Sombrero de paja toquilla" onerror="this.remove()">
   <h1>Manabí</h1>
   <p>Cultura viva: arte, sabores, música y tradiciones de una provincia del Ecuador.</p>
   <a class="btn" href="#provincia">Explorar el portal</a>
