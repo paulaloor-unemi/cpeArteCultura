@@ -13,8 +13,8 @@
 #provincia .ph{aspect-ratio:1/1;background:#fff}
 #provincia .ph img{object-fit:contain;background:#fff}
 @media(min-width:761px){#provincia .cols{grid-template-columns:1fr 1.3fr}}
-.marquee{position:relative;overflow:hidden;height:clamp(190px,30vw,340px);background:var(--espuma);border-bottom:4px solid var(--paja)}
-.marquee img{position:absolute;top:50%;left:0;height:86%;width:auto;max-width:none;animation:pasa 20s linear infinite;will-change:transform}
+.marquee{position:relative;overflow:hidden;height:clamp(190px,30vw,340px);background:var(--espuma);border-bottom:3px solid var(--paja)}
+.marquee img{position:absolute;top:40%;left:0;height:76%;width:auto;max-width:none;animation:pasa 20s linear infinite;will-change:transform}
 .marquee:hover img{animation-play-state:paused}
 @keyframes pasa{from{transform:translate(100vw,-50%)}to{transform:translate(-100%,-50%)}}
 @media(prefers-reduced-motion:reduce){.marquee img{animation:none;left:50%;transform:translate(-50%,-50%)}}
