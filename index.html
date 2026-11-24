@@ -15,6 +15,16 @@
 @media(min-width:761px){#provincia .cols{grid-template-columns:1fr 1.3fr}}
 .sombrero{position:absolute;right:3vw;top:4vh;width:clamp(280px,42vw,700px);height:auto;pointer-events:none;filter:drop-shadow(0 12px 18px rgba(0,0,0,.28))}
 @media(max-width:760px){.sombrero{width:52vw;top:3vh;right:2vw}}
+#leyendas .ph{aspect-ratio:16/9;background:#1d1d1b}
+#leyendas .ph img{object-fit:contain}
+.innov{display:grid;grid-template-columns:1fr 1.2fr;gap:40px;margin-top:28px;align-items:start}
+.innov h3{font:800 22px/1.2 var(--ft-t);margin:0 0 10px}
+.innov .info .ph{aspect-ratio:auto;min-height:200px;background:#fff}
+.innov .info .ph img{position:static;height:auto;object-fit:contain}
+.innov figcaption,.innov .vid p{font-size:16px;line-height:1.55;opacity:1;margin:10px 0}
+.innov iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:6px;background:#000}
+.qrbox{display:flex;gap:20px;align-items:center;margin-top:28px}.qrbox h3{font-size:18px;margin:0 0 4px}.qrbox p{margin:0;font-size:15px}
+@media(max-width:760px){.innov{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -103,6 +113,68 @@ const SECCIONES = [
    items:[{t:"Ritmo principal",d:"Amorfino"},{t:"Otros ritmos",d:"Galope, guaracha montubia y caminante"},{t:"Instrumento",d:"Caja tambora"}],
    img:"musica.jpg", pie:"Música tradicional de Manabí.", fuentes:"Macías Ferrin (2020)." },
 
+ { id:"juegos", nav:"Juegos", titulo:"Juegos tradicionales",
+   texto:[
+    "<strong>Origen.</strong> Los juegos tradicionales se transmiten de generación en generación y reflejan la vida de las comunidades. No tienen un único autor ni una fecha de origen: se aprendieron jugando y se heredaron de padres a hijos. En Manabí se mantienen torneos y fiestas. Por ejemplo, en 2013 Jaramijó recibió los III Juegos Autóctonos, Ancestrales, Populares y Tradicionales del Pueblo Cholo del Ecuador, con participantes de Santa Elena, Los Ríos, El Oro, Guayas y Manabí (Ministerio del Deporte, 2013).",
+    "<strong>Reglas.</strong> En ese torneo se jugó trompo, cuarenta, palo encebado, ensacados, carrera de tres pies, gallina ciega, huevo con la cuchara, salta la cuerda y rayuela, entre otros (Ministerio del Deporte, 2013). En el trompo se enrolla un cordel y se lanza el trompo con fuerza para que gire; gana quien lo mantiene girando más tiempo. En el palo encebado se debe trepar un poste untado con grasa para llegar a la punta. En los ensacados se corre saltando dentro de un saco, y quien se cae o sale del saco queda eliminado.",
+    "<strong>Importancia.</strong> Estos juegos fortalecen la convivencia, la actividad física y la identidad de las comunidades. El Ministerio del Deporte impulsa estos torneos para recuperar las tradiciones de los pueblos (Ministerio del Deporte, 2013)."],
+   items:[{t:"Trompo",d:"Se lanza con un cordel; gana quien lo mantiene girando más tiempo."},{t:"Palo encebado",d:"Se trepa un poste untado con grasa hasta llegar a la punta."},{t:"Ensacados",d:"Se corre saltando dentro de un saco; quien se cae o sale queda eliminado."}],
+   fuentes:"Ministerio del Deporte (2013)." },
+
+ { id:"leyendas", nav:"Cuentos y leyendas", titulo:"Cuentos y leyendas",
+   texto:[
+    "<strong>Origen.</strong> Los cuentos y las leyendas de Manabí forman parte de la tradición oral ecuatoriana. Se transmiten de generación en generación mediante relatos compartidos en las familias y comunidades. Estas narraciones conservan creencias, costumbres, experiencias y formas de interpretar el entorno. Autores como Domingo Nevaldo Zambrano recopilaron historias tradicionales para contribuir a la conservación de la memoria cultural manabita (Zambrano, 2005).",
+    "<strong>Significado.</strong> Estas narraciones representan la identidad cultural de Manabí, porque reflejan la imaginación popular y la relación de sus habitantes con los lugares y las costumbres de su provincia. Entre los relatos tradicionales se encuentran La Lutona y La Poza del Encanto (Zambrano, 2005). Su importancia no está únicamente en entretener, sino también en conservar historias que forman parte de la memoria colectiva y permiten conocer las expresiones culturales de las comunidades (Joza Vera y Dueñas Vera, 2017).",
+    "<strong>Mensaje.</strong> Las leyendas y los cuentos nos invitan a valorar nuestras raíces, respetar las tradiciones y transmitir las historias a las nuevas generaciones. Recopilar y compartir estas narraciones ayuda a mantener viva la memoria cultural de los pueblos.",
+    "<strong>Ejemplo: La Poza del Encanto.</strong> Esta narración forma parte de las recopilaciones de leyendas manabitas. Su nombre evoca un lugar rodeado de misterio, relacionado con las creencias y la imaginación popular. Como interpretación cultural, la leyenda permite reflexionar sobre cómo ciertos espacios naturales adquieren un significado especial mediante las historias transmitidas por sus habitantes. Este ejemplo muestra la relación entre el entorno, las creencias y la tradición oral de Manabí (Zambrano, 2005)."],
+   items:[],
+   img:"leyenda-pozo.jpg", pie:"Ilustración de la leyenda “El pozo encantado”. Fuente: Leyendas e historias de Manabí y del Ecuador.",
+   fuentes:"Zambrano (2005); Joza Vera y Dueñas Vera (2017)." },
+
+ { id:"fiestas", nav:"Fiestas y patrimonio", titulo:"Fiestas y patrimonio",
+   texto:[
+    "Las fiestas, las leyendas y el patrimonio permiten comprender la historia y la identidad cultural de Manabí. Conocerlos y conservarlos contribuye a proteger las tradiciones, valorar el legado de nuestros antepasados y transmitir esta riqueza cultural a las futuras generaciones."],
+   items:[
+    {t:"Fiestas tradicionales",d:"Reúnen a las comunidades alrededor de celebraciones religiosas, música, bailes, gastronomía y actividades populares. Un ejemplo importante es la fiesta de San Pedro y San Pablo, también conocida como Fiesta de Blancos y Negros, celebrada en Manabí. Combina la devoción religiosa con expresiones festivas y representaciones simbólicas, y fortalece la participación y la identidad comunitaria (Instituto Nacional de Patrimonio Cultural [INPC], s. f.)."},
+    {t:"Patrimonio material",d:"Está formado por bienes físicos que poseen valor histórico, arqueológico o cultural, como edificios, monumentos y objetos antiguos. En Manabí destaca el complejo arqueológico Cerros Hojas-Jaboncillo, relacionado con la cultura manteña. Sus vestigios, terrazas, estructuras y sillas de piedra permiten conocer aspectos de la organización y las actividades de esta sociedad prehispánica (INPC, s. f.)."},
+    {t:"Patrimonio inmaterial",d:"Comprende las tradiciones, los conocimientos, las técnicas y las celebraciones que las comunidades transmiten de generación en generación. Un ejemplo es el tejido tradicional del sombrero ecuatoriano de paja toquilla, una práctica artesanal que conserva conocimientos sobre la preparación de las fibras y la elaboración del sombrero. Fue inscrito por la UNESCO en la Lista Representativa del Patrimonio Cultural Inmaterial de la Humanidad en 2012 (UNESCO, 2012)."}],
+   fuentes:"INPC (s. f.); UNESCO (2012)." },
+
+ { id:"desarrollo", nav:"Desarrollo local", titulo:"Desarrollo local",
+   texto:[
+    "La cultura de Manabí constituye un elemento importante para el desarrollo de la provincia, porque reúne tradiciones, conocimientos, gastronomía, artesanías, festividades y diferentes expresiones que se relacionan con la historia y la forma de vida de sus habitantes. El patrimonio cultural inmaterial comprende conocimientos y prácticas que se transmiten entre generaciones y que contribuyen al sentido de identidad de las comunidades (INPC, 2020)."],
+   items:[
+    {t:"Economía",d:"La cultura manabita puede generar oportunidades para productores, artesanos, emprendedores y trabajadores vinculados con la gastronomía y el turismo. Las artesanías, el sombrero de paja toquilla, la cerámica y la cestería forman parte de las actividades culturales de la provincia. La gastronomía tradicional relaciona los conocimientos culinarios con la producción agrícola y pesquera."},
+    {t:"Educación",d:"La educación permite que los conocimientos y tradiciones sean conocidos por las nuevas generaciones. El sistema educativo ecuatoriano reconoce la importancia de que los estudiantes conozcan y valoren el patrimonio cultural de sus localidades, provincias y país (Ministerio de Educación, 2026). En Manabí también se desarrollan actividades culturales y educativas en museos y centros culturales."},
+    {t:"Turismo",d:"La cultura manabita es un atractivo por sus tradiciones, gastronomía, patrimonio arqueológico y artesanías. Un ejemplo es el sitio patrimonial Cerro de Hojas-Jaboncillo, relacionado con la cultura manteña, que combina valores históricos, culturales y ecológicos y recibe visitantes (INPC, 2020). La provincia también ha desarrollado rutas culturales que integran sus 22 cantones."},
+    {t:"Territorio",d:"Las tradiciones y actividades culturales se desarrollan en espacios rurales y urbanos, y están vinculadas con la agricultura, la pesca, la gastronomía y las formas de vida de las comunidades. La planificación territorial de Manabí reconoce la importancia de fortalecer la identidad y poner en valor sus recursos patrimoniales y culturales."},
+    {t:"Identidad cultural",d:"La cultura permite reconocer las costumbres, conocimientos y expresiones que distinguen a los habitantes de Manabí. La gastronomía, la tradición oral, las artesanías y las costumbres montubias forman parte de la memoria colectiva y contribuyen al sentido de pertenencia de la población."}],
+   fuentes:"INPC (2020); Ministerio de Educación (2026)." },
+
+ { id:"gobernanza", nav:"Gobernanza", titulo:"Gobernanza y patrimonio",
+   texto:[
+    "La gobernanza del patrimonio cultural requiere la participación de las instituciones públicas, comunidades, gestores culturales, organizaciones y ciudadanía. En Manabí se han impulsado procesos de planificación participativa para identificar y fortalecer los elementos culturales de los diferentes cantones de la provincia."],
+   items:[
+    {t:"Participación ciudadana",d:"Permite que las comunidades aporten sus conocimientos y experiencias sobre las tradiciones y manifestaciones culturales de sus territorios. La elaboración de las rutas culturales de Manabí contó con la participación de gestores culturales y autoridades, con el objetivo de visibilizar el patrimonio y fortalecer la gestión cultural territorial."},
+    {t:"Conservación cultural",d:"Busca proteger tanto los bienes materiales como las manifestaciones inmateriales. En Manabí se desarrollan acciones para documentar y salvaguardar expresiones como el amorfino, la gastronomía y los conocimientos tradicionales relacionados con el territorio y la producción agroalimentaria."},
+    {t:"Igualdad",d:"Implica reconocer y respetar la diversidad cultural de la provincia, permitiendo que diferentes comunidades y grupos participen en la vida cultural. La legislación cultural ecuatoriana reconoce el derecho de las personas y comunidades a construir y mantener su identidad cultural y a expresar sus propias manifestaciones (INPC, 2016)."},
+    {t:"Comunicación del patrimonio",d:"Permite difundir las tradiciones y conocimientos de Manabí mediante actividades educativas, medios de comunicación y herramientas digitales. La cartografía de rutas culturales de la provincia incorpora recursos digitales con fines pedagógicos, turísticos y de gestión cultural."}],
+   fuentes:"INPC (2016)." },
+
+ { id:"innovacion", nav:"Innovación", titulo:"Innovación digital del portal", especial:"innovacion",
+   texto:[
+    "El portal incorpora tres elementos de innovación: una infografía, un video y un código QR de acceso. Juntos presentan la información de forma visual y dinámica, y facilitan que más personas conozcan, valoren y preserven el patrimonio cultural de Manabí."],
+   items:[],
+   infografia:{
+     img:"infografia.png", enlace:"https://canva.link/13pwrjp8vsjvqry",
+     titulo:"Infografía: “Manabí en cifras y cultura”",
+     desc:"Sintetiza en un solo espacio gráfico los datos generales de la provincia (ubicación en la Costa, Portoviejo como capital, 22 cantones y una población aproximada de 1,5 millones de habitantes), cinco platos típicos con su ingrediente clave, el arte y el patrimonio (como el sombrero de paja toquilla) y expresiones musicales como el amorfino. Ofrece una lectura ágil que fomenta el sentido de pertenencia y la preservación del patrimonio. Diseñada en Canva."},
+   video:{
+     id:"1XWLwpNFt8u0cz1-tWW1Olp_iW5vvvaxu",
+     titulo:"Video: “Manabí, cultura viva”",
+     desc:"Recorrido visual por la identidad cultural de la provincia: su geografía y arquitectura, su gastronomía tradicional, su música, los amorfinos y las festividades populares. Cierra con un mensaje sobre la importancia de conservar el patrimonio tangible e intangible. Editado en CapCut."},
+   qr:{ img:"qr.png", titulo:"Código QR de acceso", desc:"Escanea el código con tu celular para abrir el portal." }},
+
  { id:"referencias", nav:"Referencias", titulo:"Referencias", href:"referencias.html",
    texto:["Consulta la lista completa de fuentes utilizadas en este portal, en formato APA (7.ª edición)."],
    items:[], especial:"referencias" }
@@ -121,6 +193,22 @@ document.getElementById("contenido").innerHTML = SECCIONES.map(s => {
     ? `<div class="items">${s.items.map(i => `<div class="item"><h3>${i.t}</h3><p>${i.d}</p></div>`).join("")}</div>` : "";
   let cuerpo;
   if (s.especial === "referencias") cuerpo = `<div class="txt">${parrafos}</div><a class="btn-ref" href="${s.href}">Ver referencias</a>`;
+  else if (s.especial === "innovacion") {
+    const f = s.infografia, v = s.video, q = s.qr;
+    cuerpo = `<div class="txt">${parrafos}</div>
+    <div class="innov">
+      <figure class="info"><h3>${f.titulo}</h3>${ph(f.img, "Infografía")}<figcaption>${f.desc}</figcaption>
+        <a class="btn-ref" href="${f.enlace}" target="_blank" rel="noopener">Ver en Canva</a></figure>
+      <div class="vid"><h3>${v.titulo}</h3>
+        <iframe src="https://drive.google.com/file/d/${v.id}/preview" title="${v.titulo}" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+        <p>${v.desc}</p>
+        <a class="btn-ref" href="https://drive.google.com/file/d/${v.id}/view" target="_blank" rel="noopener">Abrir video en Drive</a>
+        <div class="qrbox"><div class="qr"><span>QR<br>(img/${q.img})</span><img src="img/${q.img}" alt="${q.titulo}" onerror="this.remove()"></div>
+          <div><h3>${q.titulo}</h3><p>${q.desc}</p></div></div>
+      </div>
+    </div>`;
+  }
+  else if (!s.img) cuerpo = `<div class="txt">${parrafos}<p class="fuentes">Fuentes: ${s.fuentes}</p></div>${items}`;
   else cuerpo = `<div class="cols"><div class="txt">${parrafos}<p class="fuentes">Fuentes: ${s.fuentes}</p></div>
     <figure style="margin:0">${ph(s.img, s.titulo)}${s.pie ? `<figcaption>${s.pie}</figcaption>` : ""}</figure></div>${items}`;
   return `<section id="${s.id}"><div class="in"><h2>${s.titulo}</h2>${cuerpo}</div></section>`;
