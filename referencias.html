@@ -10,19 +10,10 @@
 </head>
 <body>
 
-<nav aria-label="Navegación">
-  <a href="index.html">← Volver al portal</a>
-  <a href="index.html#provincia">Provincia</a>
-  <a href="index.html#arte">Arte y patrimonio</a>
-  <a href="index.html#cultura">Cultura</a>
-  <a href="index.html#gastronomia">Gastronomía</a>
-  <a href="index.html#musica">Música</a>
-  <a href="index.html#juegos">Juegos</a>
-  <a href="index.html#leyendas">Cuentos y leyendas</a>
-  <a href="index.html#fiestas">Fiestas y patrimonio</a>
-  <a href="index.html#desarrollo">Desarrollo local</a>
-  <a href="index.html#gobernanza">Gobernanza</a>
-  <a href="index.html#innovacion">Innovación</a>
+<nav class="navbar" id="menu" aria-label="Navegación">
+  <div class="nav-in"><a class="brand" href="index.html"><i>M</i>Manabí</a>
+   <button class="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+   <div class="links"><a href="index.html">Inicio</a><a href="index.html#provincia">Provincia</a><a href="index.html#arte">Arte</a><a href="index.html#cultura">Cultura</a><a href="index.html#gastronomia">Gastronomía</a><a href="index.html#musica">Música</a><a href="index.html#juegos">Juegos</a><a href="index.html#leyendas">Leyendas</a><a href="index.html#fiestas">Fiestas</a><a href="index.html#desarrollo">Desarrollo</a><a href="index.html#gobernanza">Gobernanza</a><a href="index.html#innovacion">Innovación</a><a class="ref activo" href="referencias.html">Referencias</a></div></div>
 </nav>
 
 <section>
@@ -61,6 +52,9 @@ const REFERENCIAS = [
   `Suárez Baque, T. L. (2023). <em>Las costumbres y tradiciones y su importancia en los habitantes de la parroquia La América, del cantón Jipijapa, provincia de Manabí</em> [Tesis de grado, Universidad Estatal del Sur de Manabí]. Repositorio Digital UNESUM. ${A("https://repositorio.unesum.edu.ec/handle/53000/5633")}`
 ];
 document.getElementById("lista").innerHTML = REFERENCIAS.map(r => `<li>${r}</li>`).join("");
+
+(function(){const nav=document.getElementById("menu"),btn=nav.querySelector(".burger");
+btn.addEventListener("click",()=>{const o=nav.classList.toggle("abierto");btn.setAttribute("aria-expanded",o);});})();
 </script>
 </body>
 </html>
