@@ -17,19 +17,33 @@
 @media(max-width:760px){.sombrero{width:52vw;top:3vh;right:2vw}}
 #leyendas .ph{aspect-ratio:16/9;background:#1d1d1b}
 #leyendas .ph img{object-fit:contain}
-.innov{display:grid;grid-template-columns:1fr 1.2fr;gap:40px;margin-top:28px;align-items:start}
-.innov h3{font:800 22px/1.2 var(--ft-t);margin:0 0 10px}
-.innov .info .ph{aspect-ratio:auto;min-height:200px;background:#fff}
-.innov .info .ph img{position:static;height:auto;object-fit:contain}
-.innov figcaption,.innov .vid p{font-size:16px;line-height:1.55;opacity:1;margin:10px 0}
-.innov iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:6px;background:#000}
-.qrbox{display:flex;gap:20px;align-items:center;margin-top:28px}.qrbox h3{font-size:18px;margin:0 0 4px}.qrbox p{margin:0;font-size:15px}
-@media(max-width:760px){.innov{grid-template-columns:1fr}}
+.innov{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px;align-items:stretch}
+.card{background:#fff;border-radius:18px;padding:24px;box-shadow:0 10px 28px rgba(15,42,51,.14);border-top:8px solid var(--mar);display:flex;flex-direction:column;gap:12px}
+.card.c-vid{border-top-color:var(--coral)}
+.card h3{font:800 22px/1.2 var(--ft-t);margin:0}
+.card p{margin:0;font-size:16px;line-height:1.55}
+.card .btn-ref{align-self:flex-start;margin-top:auto}
+.card-body{border-radius:10px;overflow:hidden;background:var(--espuma)}
+.card-body .ph{aspect-ratio:auto;min-height:200px;background:#fff;border-radius:0}
+.card-body .ph{position:relative;display:block}
+.card-body .ph span{position:absolute;inset:0;display:grid;place-items:center}
+.card-body .ph img{position:relative;display:block;margin:auto;height:auto;max-width:100%;max-height:440px;object-fit:contain;background:#fff}
+.card-body iframe{display:block;width:100%;aspect-ratio:16/9;border:0;background:#000}
+.tag{display:inline-block;align-self:flex-start;background:var(--paja);color:var(--tinta);font:800 12px var(--ft-t);letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+.qrbox{display:flex;gap:22px;align-items:center;margin-top:28px;background:#fff;border-radius:18px;padding:22px 24px;box-shadow:0 10px 28px rgba(15,42,51,.14);border-left:8px solid var(--paja)}
+.qrbox h3{font:800 20px var(--ft-t);margin:8px 0 4px}.qrbox p{margin:0;font-size:15px}
+@media(max-width:760px){.innov{grid-template-columns:1fr}.qrbox{flex-direction:column;align-items:flex-start}}
+.banner{margin:40px 0 0}.banner .ph{aspect-ratio:16/7;border-radius:18px;box-shadow:0 10px 28px rgba(15,42,51,.18)}
+.banner figcaption{margin-top:8px}
+.item.con-img{background:#fff;border-radius:16px;padding:18px;box-shadow:0 8px 22px rgba(15,42,51,.12)}
+.card-img{margin:14px 0 0}.card-img .ph{aspect-ratio:16/10;border-radius:10px}
+#leyendas .ph{aspect-ratio:16/9;background:#1d1d1b}
+#leyendas .ph img{object-fit:contain}
 </style>
 </head>
 <body>
 
-<nav id="menu" aria-label="Secciones"></nav>
+<nav class="navbar" id="menu" aria-label="Secciones"></nav>
 
 <header class="hero" id="inicio">
   <img class="sombrero" src="img/sombrero.png" alt="Sombrero de paja toquilla" onerror="this.remove()">
@@ -74,7 +88,7 @@ const SECCIONES = [
    img:"mapa-manabi.png", pie:"Figura 1. Mapa de la provincia de Manabí. Fuente: paintmaps.com.",
    fuentes:"Gobernación de Manabí (s. f.-a); CONGOPE (s. f.)." },
 
- { id:"arte", nav:"Arte y patrimonio", titulo:"Arte y patrimonio",
+ { id:"arte", nav:"Arte", titulo:"Arte y patrimonio",
    texto:[
     "<strong>Arte.</strong> Manabí conserva un legado artístico ancestral. El Museo y Centro Cultural Manta muestra elementos de las culturas Valdivia, Machalilla, Chorrera, Jama Coaque, Bahía, Guangala y Manteño, entre ellos las sillas en forma de “U” (Ministerio de Cultura y Patrimonio, 2022). La cultura Jama Coaque destacó por su cerámica hecha por artesanos especializados, con figurillas de músicos, danzantes y agricultores (Ministerio de Cultura y Patrimonio, s. f.).",
     "<strong>Arquitectura.</strong> Bahía de Caráquez recibió la denominación de “ciudad patrimonial” en 1955 por sus bienes históricos, arquitectónicos y culturales (Instituto Nacional de Patrimonio Cultural [INPC], s. f.). En Portoviejo, la casa Sara Cedeño de Vélez, construida hacia 1925 tras el incendio de la ciudad, fue rehabilitada por el INPC conservando su arquitectura original (Gobernación de Manabí, s. f.-b).",
@@ -119,9 +133,10 @@ const SECCIONES = [
     "<strong>Reglas.</strong> En ese torneo se jugó trompo, cuarenta, palo encebado, ensacados, carrera de tres pies, gallina ciega, huevo con la cuchara, salta la cuerda y rayuela, entre otros (Ministerio del Deporte, 2013). En el trompo se enrolla un cordel y se lanza el trompo con fuerza para que gire; gana quien lo mantiene girando más tiempo. En el palo encebado se debe trepar un poste untado con grasa para llegar a la punta. En los ensacados se corre saltando dentro de un saco, y quien se cae o sale del saco queda eliminado.",
     "<strong>Importancia.</strong> Estos juegos fortalecen la convivencia, la actividad física y la identidad de las comunidades. El Ministerio del Deporte impulsa estos torneos para recuperar las tradiciones de los pueblos (Ministerio del Deporte, 2013)."],
    items:[{t:"Trompo",d:"Se lanza con un cordel; gana quien lo mantiene girando más tiempo."},{t:"Palo encebado",d:"Se trepa un poste untado con grasa hasta llegar a la punta."},{t:"Ensacados",d:"Se corre saltando dentro de un saco; quien se cae o sale queda eliminado."}],
+   banner:"juegos_tradicionales.jpg", bannerPie:"Juegos tradicionales de Manabí.",
    fuentes:"Ministerio del Deporte (2013)." },
 
- { id:"leyendas", nav:"Cuentos y leyendas", titulo:"Cuentos y leyendas",
+ { id:"leyendas", nav:"Leyendas", titulo:"Cuentos y leyendas",
    texto:[
     "<strong>Origen.</strong> Los cuentos y las leyendas de Manabí forman parte de la tradición oral ecuatoriana. Se transmiten de generación en generación mediante relatos compartidos en las familias y comunidades. Estas narraciones conservan creencias, costumbres, experiencias y formas de interpretar el entorno. Autores como Domingo Nevaldo Zambrano recopilaron historias tradicionales para contribuir a la conservación de la memoria cultural manabita (Zambrano, 2005).",
     "<strong>Significado.</strong> Estas narraciones representan la identidad cultural de Manabí, porque reflejan la imaginación popular y la relación de sus habitantes con los lugares y las costumbres de su provincia. Entre los relatos tradicionales se encuentran La Lutona y La Poza del Encanto (Zambrano, 2005). Su importancia no está únicamente en entretener, sino también en conservar historias que forman parte de la memoria colectiva y permiten conocer las expresiones culturales de las comunidades (Joza Vera y Dueñas Vera, 2017).",
@@ -131,16 +146,17 @@ const SECCIONES = [
    img:"leyenda-pozo.jpg", pie:"Ilustración de la leyenda “El pozo encantado”. Fuente: Leyendas e historias de Manabí y del Ecuador.",
    fuentes:"Zambrano (2005); Joza Vera y Dueñas Vera (2017)." },
 
- { id:"fiestas", nav:"Fiestas y patrimonio", titulo:"Fiestas y patrimonio",
+ { id:"fiestas", nav:"Fiestas", titulo:"Fiestas y patrimonio",
    texto:[
     "Las fiestas, las leyendas y el patrimonio permiten comprender la historia y la identidad cultural de Manabí. Conocerlos y conservarlos contribuye a proteger las tradiciones, valorar el legado de nuestros antepasados y transmitir esta riqueza cultural a las futuras generaciones."],
    items:[
-    {t:"Fiestas tradicionales",d:"Reúnen a las comunidades alrededor de celebraciones religiosas, música, bailes, gastronomía y actividades populares. Un ejemplo importante es la fiesta de San Pedro y San Pablo, también conocida como Fiesta de Blancos y Negros, celebrada en Manabí. Combina la devoción religiosa con expresiones festivas y representaciones simbólicas, y fortalece la participación y la identidad comunitaria (Instituto Nacional de Patrimonio Cultural [INPC], s. f.)."},
-    {t:"Patrimonio material",d:"Está formado por bienes físicos que poseen valor histórico, arqueológico o cultural, como edificios, monumentos y objetos antiguos. En Manabí destaca el complejo arqueológico Cerros Hojas-Jaboncillo, relacionado con la cultura manteña. Sus vestigios, terrazas, estructuras y sillas de piedra permiten conocer aspectos de la organización y las actividades de esta sociedad prehispánica (INPC, s. f.)."},
-    {t:"Patrimonio inmaterial",d:"Comprende las tradiciones, los conocimientos, las técnicas y las celebraciones que las comunidades transmiten de generación en generación. Un ejemplo es el tejido tradicional del sombrero ecuatoriano de paja toquilla, una práctica artesanal que conserva conocimientos sobre la preparación de las fibras y la elaboración del sombrero. Fue inscrito por la UNESCO en la Lista Representativa del Patrimonio Cultural Inmaterial de la Humanidad en 2012 (UNESCO, 2012)."}],
+    {t:"Fiestas tradicionales",img:"Fiestas_tradicionales.jpg",d:"Reúnen a las comunidades alrededor de celebraciones religiosas, música, bailes, gastronomía y actividades populares. Un ejemplo importante es la fiesta de San Pedro y San Pablo, también conocida como Fiesta de Blancos y Negros, celebrada en Manabí. Combina la devoción religiosa con expresiones festivas y representaciones simbólicas, y fortalece la participación y la identidad comunitaria (Instituto Nacional de Patrimonio Cultural [INPC], s. f.)."},
+    {t:"Patrimonio material",img:"Patrimonio_material.jpeg",d:"Está formado por bienes físicos que poseen valor histórico, arqueológico o cultural, como edificios, monumentos y objetos antiguos. En Manabí destaca el complejo arqueológico Cerros Hojas-Jaboncillo, relacionado con la cultura manteña. Sus vestigios, terrazas, estructuras y sillas de piedra permiten conocer aspectos de la organización y las actividades de esta sociedad prehispánica (INPC, s. f.)."},
+    {t:"Patrimonio inmaterial",img:"Patrimonio_inmaterial.jpg",d:"Comprende las tradiciones, los conocimientos, las técnicas y las celebraciones que las comunidades transmiten de generación en generación. Un ejemplo es el tejido tradicional del sombrero ecuatoriano de paja toquilla, una práctica artesanal que conserva conocimientos sobre la preparación de las fibras y la elaboración del sombrero. Fue inscrito por la UNESCO en la Lista Representativa del Patrimonio Cultural Inmaterial de la Humanidad en 2012 (UNESCO, 2012)."}],
+   minItem:300,
    fuentes:"INPC (s. f.); UNESCO (2012)." },
 
- { id:"desarrollo", nav:"Desarrollo local", titulo:"Desarrollo local",
+ { id:"desarrollo", nav:"Desarrollo", titulo:"Desarrollo local",
    texto:[
     "La cultura de Manabí constituye un elemento importante para el desarrollo de la provincia, porque reúne tradiciones, conocimientos, gastronomía, artesanías, festividades y diferentes expresiones que se relacionan con la historia y la forma de vida de sus habitantes. El patrimonio cultural inmaterial comprende conocimientos y prácticas que se transmiten entre generaciones y que contribuyen al sentido de identidad de las comunidades (INPC, 2020)."],
    items:[
@@ -149,16 +165,19 @@ const SECCIONES = [
     {t:"Turismo",d:"La cultura manabita es un atractivo por sus tradiciones, gastronomía, patrimonio arqueológico y artesanías. Un ejemplo es el sitio patrimonial Cerro de Hojas-Jaboncillo, relacionado con la cultura manteña, que combina valores históricos, culturales y ecológicos y recibe visitantes (INPC, 2020). La provincia también ha desarrollado rutas culturales que integran sus 22 cantones."},
     {t:"Territorio",d:"Las tradiciones y actividades culturales se desarrollan en espacios rurales y urbanos, y están vinculadas con la agricultura, la pesca, la gastronomía y las formas de vida de las comunidades. La planificación territorial de Manabí reconoce la importancia de fortalecer la identidad y poner en valor sus recursos patrimoniales y culturales."},
     {t:"Identidad cultural",d:"La cultura permite reconocer las costumbres, conocimientos y expresiones que distinguen a los habitantes de Manabí. La gastronomía, la tradición oral, las artesanías y las costumbres montubias forman parte de la memoria colectiva y contribuyen al sentido de pertenencia de la población."}],
+   minItem:320,
+   banner:"Desarrollo_local.jpg", bannerPie:"Cultura y desarrollo local en Manabí.",
    fuentes:"INPC (2020); Ministerio de Educación (2026)." },
 
  { id:"gobernanza", nav:"Gobernanza", titulo:"Gobernanza y patrimonio",
    texto:[
     "La gobernanza del patrimonio cultural requiere la participación de las instituciones públicas, comunidades, gestores culturales, organizaciones y ciudadanía. En Manabí se han impulsado procesos de planificación participativa para identificar y fortalecer los elementos culturales de los diferentes cantones de la provincia."],
    items:[
-    {t:"Participación ciudadana",d:"Permite que las comunidades aporten sus conocimientos y experiencias sobre las tradiciones y manifestaciones culturales de sus territorios. La elaboración de las rutas culturales de Manabí contó con la participación de gestores culturales y autoridades, con el objetivo de visibilizar el patrimonio y fortalecer la gestión cultural territorial."},
-    {t:"Conservación cultural",d:"Busca proteger tanto los bienes materiales como las manifestaciones inmateriales. En Manabí se desarrollan acciones para documentar y salvaguardar expresiones como el amorfino, la gastronomía y los conocimientos tradicionales relacionados con el territorio y la producción agroalimentaria."},
-    {t:"Igualdad",d:"Implica reconocer y respetar la diversidad cultural de la provincia, permitiendo que diferentes comunidades y grupos participen en la vida cultural. La legislación cultural ecuatoriana reconoce el derecho de las personas y comunidades a construir y mantener su identidad cultural y a expresar sus propias manifestaciones (INPC, 2016)."},
-    {t:"Comunicación del patrimonio",d:"Permite difundir las tradiciones y conocimientos de Manabí mediante actividades educativas, medios de comunicación y herramientas digitales. La cartografía de rutas culturales de la provincia incorpora recursos digitales con fines pedagógicos, turísticos y de gestión cultural."}],
+    {t:"Participación ciudadana",img:"Participación_ciudadana.jpeg",d:"Permite que las comunidades aporten sus conocimientos y experiencias sobre las tradiciones y manifestaciones culturales de sus territorios. La elaboración de las rutas culturales de Manabí contó con la participación de gestores culturales y autoridades, con el objetivo de visibilizar el patrimonio y fortalecer la gestión cultural territorial."},
+    {t:"Conservación cultural",img:"Conservación_cultural.jpg",d:"Busca proteger tanto los bienes materiales como las manifestaciones inmateriales. En Manabí se desarrollan acciones para documentar y salvaguardar expresiones como el amorfino, la gastronomía y los conocimientos tradicionales relacionados con el territorio y la producción agroalimentaria."},
+    {t:"Igualdad",img:"Igualdad.jpeg",d:"Implica reconocer y respetar la diversidad cultural de la provincia, permitiendo que diferentes comunidades y grupos participen en la vida cultural. La legislación cultural ecuatoriana reconoce el derecho de las personas y comunidades a construir y mantener su identidad cultural y a expresar sus propias manifestaciones (INPC, 2016)."},
+    {t:"Comunicación del patrimonio",img:"Comunicación_del_patrimonio.jpg",d:"Permite difundir las tradiciones y conocimientos de Manabí mediante actividades educativas, medios de comunicación y herramientas digitales. La cartografía de rutas culturales de la provincia incorpora recursos digitales con fines pedagógicos, turísticos y de gestión cultural."}],
+   minItem:440,
    fuentes:"INPC (2016)." },
 
  { id:"innovacion", nav:"Innovación", titulo:"Innovación digital del portal", especial:"innovacion",
@@ -182,41 +201,65 @@ const SECCIONES = [
 
 /* ===================== NO NECESITAS TOCAR DESDE AQUÍ ===================== */
 const ph = (src, etiqueta) =>
-  `<div class="ph"><span>${etiqueta}<br>(img/${src})</span><img src="img/${src}" alt="${etiqueta}" onerror="this.remove()"></div>`;
+  `<div class="ph"><span>${etiqueta}<br>(img/${src})</span><img src="img/${encodeURI(src)}" alt="${etiqueta}" onerror="this.remove()"></div>`;
 
 document.getElementById("menu").innerHTML =
-  `<a href="#inicio">Inicio</a>` + SECCIONES.map(s => `<a href="${s.href || "#" + s.id}">${s.nav}</a>`).join("");
+  `<div class="nav-in"><a class="brand" href="#inicio"><i>M</i>Manabí</a>
+   <button class="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+   <div class="links"><a href="#inicio" data-id="inicio">Inicio</a>` +
+  SECCIONES.map(s => `<a ${s.href ? 'class="ref" ' : ""}href="${s.href || "#" + s.id}" data-id="${s.id}">${s.nav}</a>`).join("") + `</div></div>`;
 
 document.getElementById("contenido").innerHTML = SECCIONES.map(s => {
   const parrafos = s.texto.map(p => `<p>${p}</p>`).join("");
   const items = s.items.length
-    ? `<div class="items">${s.items.map(i => `<div class="item"><h3>${i.t}</h3><p>${i.d}</p></div>`).join("")}</div>` : "";
+    ? `<div class="items" style="grid-template-columns:repeat(auto-fit,minmax(min(${s.minItem || 230}px,100%),1fr))">${s.items.map(i => `<div class="item${i.img ? " con-img" : ""}"><h3>${i.t}</h3><p>${i.d}</p>${i.img ? `<figure class="card-img">${ph(i.img, i.t)}</figure>` : ""}</div>`).join("")}</div>` : "";
+  const banner = s.banner ? `<figure class="banner">${ph(s.banner, s.titulo)}${s.bannerPie ? `<figcaption>${s.bannerPie}</figcaption>` : ""}</figure>` : "";
   let cuerpo;
   if (s.especial === "referencias") cuerpo = `<div class="txt">${parrafos}</div><a class="btn-ref" href="${s.href}">Ver referencias</a>`;
   else if (s.especial === "innovacion") {
     const f = s.infografia, v = s.video, q = s.qr;
     cuerpo = `<div class="txt">${parrafos}</div>
     <div class="innov">
-      <figure class="info"><h3>${f.titulo}</h3>${ph(f.img, "Infografía")}<figcaption>${f.desc}</figcaption>
-        <a class="btn-ref" href="${f.enlace}" target="_blank" rel="noopener">Ver en Canva</a></figure>
-      <div class="vid"><h3>${v.titulo}</h3>
-        <iframe src="https://drive.google.com/file/d/${v.id}/preview" title="${v.titulo}" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe>
+      <article class="card c-info">
+        <span class="tag">Innovación 1 · Infografía</span>
+        <h3>${f.titulo}</h3>
+        <div class="card-body">${ph(f.img, "Infografía")}</div>
+        <p>${f.desc}</p>
+        <a class="btn-ref" href="${f.enlace}" target="_blank" rel="noopener">Ver en Canva</a>
+      </article>
+      <article class="card c-vid">
+        <span class="tag">Innovación 2 · Video</span>
+        <h3>${v.titulo}</h3>
+        <div class="card-body"><iframe src="https://drive.google.com/file/d/${v.id}/preview" title="${v.titulo}" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe></div>
         <p>${v.desc}</p>
         <a class="btn-ref" href="https://drive.google.com/file/d/${v.id}/view" target="_blank" rel="noopener">Abrir video en Drive</a>
-        <div class="qrbox"><div class="qr"><span>QR<br>(img/${q.img})</span><img src="img/${q.img}" alt="${q.titulo}" onerror="this.remove()"></div>
-          <div><h3>${q.titulo}</h3><p>${q.desc}</p></div></div>
-      </div>
-    </div>`;
+      </article>
+    </div>
+    <div class="qrbox"><div class="qr"><span>QR<br>(img/${q.img})</span><img src="img/${q.img}" alt="${q.titulo}" onerror="this.remove()"></div>
+      <div><span class="tag">Innovación 3 · Código QR</span><h3>${q.titulo}</h3><p>${q.desc}</p></div></div>`;
   }
-  else if (!s.img) cuerpo = `<div class="txt">${parrafos}<p class="fuentes">Fuentes: ${s.fuentes}</p></div>${items}`;
+  else if (!s.img) cuerpo = `<div class="txt">${parrafos}<p class="fuentes">Fuentes: ${s.fuentes}</p></div>${items}${banner}`;
   else cuerpo = `<div class="cols"><div class="txt">${parrafos}<p class="fuentes">Fuentes: ${s.fuentes}</p></div>
-    <figure style="margin:0">${ph(s.img, s.titulo)}${s.pie ? `<figcaption>${s.pie}</figcaption>` : ""}</figure></div>${items}`;
+    <figure style="margin:0">${ph(s.img, s.titulo)}${s.pie ? `<figcaption>${s.pie}</figcaption>` : ""}</figure></div>${items}${banner}`;
   return `<section id="${s.id}"><div class="in"><h2>${s.titulo}</h2>${cuerpo}</div></section>`;
 }).join("");
 
 document.getElementById("pie-titulo").textContent = SITIO.piTitulo;
 document.getElementById("pie-texto").innerHTML =
   SITIO.piTexto + ` Enlace: <a href="${SITIO.enlace}" target="_blank" rel="noopener">${SITIO.enlace}</a>`;
+
+/* Menú: abrir/cerrar en celular y resaltar la sección visible */
+(function(){
+  const nav = document.getElementById("menu"), btn = nav.querySelector(".burger");
+  btn.addEventListener("click", () => { const o = nav.classList.toggle("abierto"); btn.setAttribute("aria-expanded", o); });
+  nav.querySelectorAll(".links a").forEach(a => a.addEventListener("click", () => { nav.classList.remove("abierto"); btn.setAttribute("aria-expanded", "false"); }));
+  const enlaces = {}; nav.querySelectorAll(".links a[data-id]").forEach(a => enlaces[a.dataset.id] = a);
+  const marcar = id => { Object.values(enlaces).forEach(a => a.classList.remove("activo")); if (enlaces[id]) enlaces[id].classList.add("activo"); };
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) marcar(e.target.id); }), { rootMargin: "-40% 0px -55% 0px" });
+    document.querySelectorAll("header#inicio, main section").forEach(el => io.observe(el));
+  }
+})();
 </script>
 </body>
 </html>
