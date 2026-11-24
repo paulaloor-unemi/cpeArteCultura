@@ -13,13 +13,11 @@
 #provincia .ph{aspect-ratio:1/1;background:#fff}
 #provincia .ph img{object-fit:contain;background:#fff}
 @media(min-width:761px){#provincia .cols{grid-template-columns:1fr 1.3fr}}
-.marquee{position:relative;margin:40px -6vw 0;overflow:hidden;padding:10px 0;background:rgba(255,255,255,.12);border-top:2px solid rgba(255,255,255,.35);border-bottom:2px solid rgba(255,255,255,.35)}
-.marquee .pista{display:flex;width:max-content;animation:desfile 38s linear infinite}
-.marquee:hover .pista{animation-play-state:paused}
-.marquee .grupo{display:flex;flex:none;gap:48px;padding-right:48px}
-.marquee img{height:clamp(90px,11vw,130px);width:auto;display:block;flex:none;border-radius:6px}
-@keyframes desfile{to{transform:translateX(-50%)}}
-@media(prefers-reduced-motion:reduce){.marquee .pista{animation:none}.marquee{overflow-x:auto}}
+.marquee{position:relative;overflow:hidden;height:clamp(170px,24vw,300px);background:var(--espuma);border-bottom:4px solid var(--paja)}
+.marquee img{position:absolute;top:50%;left:0;height:86%;width:auto;max-width:none;animation:pasa 20s linear infinite;will-change:transform}
+.marquee:hover img{animation-play-state:paused}
+@keyframes pasa{from{transform:translate(100vw,-50%)}to{transform:translate(-100%,-50%)}}
+@media(prefers-reduced-motion:reduce){.marquee img{animation:none;left:50%;transform:translate(-50%,-50%)}}
 .sombrero{position:absolute;right:3vw;top:4vh;width:clamp(280px,42vw,700px);height:auto;pointer-events:none;filter:drop-shadow(0 12px 18px rgba(0,0,0,.28))}
 @media(max-width:760px){.sombrero{width:52vw;top:3vh;right:2vw}}
 #leyendas .ph{aspect-ratio:16/9;background:#1d1d1b}
@@ -53,12 +51,13 @@
 
 <nav class="navbar" id="menu" aria-label="Secciones"></nav>
 
+<div class="marquee" aria-label="Manabí en movimiento"><img src="img/movimiento.png" alt="Manabí en movimiento" onerror="this.closest('.marquee').remove()"></div>
+
 <header class="hero" id="inicio">
   <img class="sombrero" src="img/sombrero.png" alt="Sombrero de paja toquilla" onerror="this.remove()">
   <h1>Manabí</h1>
   <p>Cultura viva: arte, sabores, música y tradiciones de una provincia del Ecuador.</p>
   <a class="btn" href="#provincia">Explorar el portal</a>
-  <div class="marquee" aria-label="Manabí en movimiento"><div class="pista"><div class="grupo"><img src="img/movimiento.png" alt="Manabí en movimiento" onerror="this.closest('.marquee').remove()"><img src="img/movimiento.png" alt="Manabí en movimiento" onerror="this.closest('.marquee').remove()"><img src="img/movimiento.png" alt="Manabí en movimiento" onerror="this.closest('.marquee').remove()"><img src="img/movimiento.png" alt="Manabí en movimiento" onerror="this.closest('.marquee').remove()"><img src="img/movimiento.png" alt="Manabí en movimiento" onerror="this.closest('.marquee').remove()"><img src="img/movimiento.png" alt="Manabí en movimiento" onerror="this.closest('.marquee').remove()"><img src="img/movimiento.png" alt="Manabí en movimiento" onerror="this.closest('.marquee').remove()"><img src="img/movimiento.png" alt="Manabí en movimiento" onerror="this.closest('.marquee').remove()"></div><div class="grupo"><img src="img/movimiento.png" alt="" aria-hidden="true"><img src="img/movimiento.png" alt="" aria-hidden="true"><img src="img/movimiento.png" alt="" aria-hidden="true"><img src="img/movimiento.png" alt="" aria-hidden="true"><img src="img/movimiento.png" alt="" aria-hidden="true"><img src="img/movimiento.png" alt="" aria-hidden="true"><img src="img/movimiento.png" alt="" aria-hidden="true"><img src="img/movimiento.png" alt="" aria-hidden="true"></div></div></div>
   <svg viewBox="0 0 1200 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 50 C150 90 300 10 450 50 S750 90 900 50 S1100 20 1200 50 V100 H0Z" fill="#f6f9f8"/></svg>
 </header>
 
